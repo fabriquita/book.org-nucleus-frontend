@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html ng-app="bootstrapApp">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/style.css">  
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <script src="js/angular.min.js"></script>
+      <script src="js/angular-route.min.js"></script>     
+    </head>
+    <body ng-controller="controladorAnimales">
+    <!-- Horizontal Navbar --> 
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img height="50px" src="img/logo.jpg"></a>
+            </div>      
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">                  
+                  <li class="dropdown">
+                    <a href="#" class="user-info dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      <img class="img-circle" src="img/user.png">
+                      <span class="user">Juan Rodriguez <br/> Administrador</span>
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>    
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>   
+                  <li><a href="#"><span class="glyphicon glyphicon-time"></span></a></li>
+                  <li><a href="#" class="active"><span class="glyphicon glyphicon-cog"></span></a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-off"></span></a></li>                   
+                </ul>                    
+            </div>
+        </div>
+    </nav>
+    <!-- End Horizontal Navbar  -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li>
+                  <a  class="active" href="#"><i class="fa fa-user"></i> Usuarios</a> 
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-users"></i> Grupos</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-sitemap"></i> Roles</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-file-code-o"></i> Permisos</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-list"></i> Campos de Usuario</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-list-alt"></i> Campos de Grupo</a>
+              </li>
+          </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid full-height">
+          <div class="row full-height">
+              <h3>Datos de Usuario</h3>
+              <hr/>
+              <div class="col-lg-12">                    
+                    <form class="form-horizontal ng-pristine ng-valid" role="form">
+                       <div class="form-group col-md-6">
+                         <label class="col-md-4 control-label">Nombre</label>
+                         <div class="col-md-8">
+                           <input class="form-control" id="focusedInput" type="text" value="Franz Mamani">
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label class="col-md-4 control-label">Nombre de Usuario</label>
+                         <div class="col-md-8">
+                           <input class="form-control" id="focusedInput" type="text" value="fmamani">
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label class="col-sm-4 control-label">Rol</label>
+                         <div class="col-sm-8">
+                           <select class="form-control">
+                              <option selected="" value="Administrator">Administrador</option>
+                              <option value="Seller">Secretaria</option>
+                           </select>
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label class="col-sm-4 control-label">Grupo</label>
+                         <div class="col-sm-8">
+                           <select class="form-control">
+                              <option selected="" value="Administrator">Grupo 1</option>
+                              <option value="Seller">Grupo 2</option>
+                           </select>
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label class="col-md-4 control-label">Email</label>
+                         <div class="col-md-8">
+                           <input class="form-control" id="focusedInput" type="text" value="jq@jq.com">
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label class="col-md-4 control-label">Last Access Date</label>
+                         <div class="col-md-8 form-control-static">
+                           <p>12/26/2014 12:33</p>
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label class="col-md-4 control-label">Status</label>
+                         <div class="col-md-8">
+                           <div class="radio">
+                             <label>
+                               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                               Active
+                             </label>
+                           </div>
+                           <div class="radio">
+                             <label>
+                               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                               Inactive
+                             </label>
+                           </div>
+                         </div>
+                       </div>                       
+                     </form> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>     
+    <script>
+         var bootstrapApp = angular.module( 'bootstrapApp' , [] )
+    </script>     
+   </body>
+</html>
+ 
+
