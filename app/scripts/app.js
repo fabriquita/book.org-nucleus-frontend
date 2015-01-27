@@ -23,6 +23,14 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/users', {
+        templateUrl: 'views/users/list.html',
+        controller: 'UserListCtrl'
+      })
+      .when('/users/create', {
+        templateUrl: 'views/users/create.html',
+        controller: 'UserCreateCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
