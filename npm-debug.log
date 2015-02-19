@@ -1,0 +1,120 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.17
+4 verbose cache add [ 'grunt-cli', null ]
+5 verbose cache add name=undefined spec="grunt-cli" args=["grunt-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'grunt-cli',
+6 verbose parsed url   path: 'grunt-cli',
+6 verbose parsed url   href: 'grunt-cli' }
+7 silly lockFile 671ef8ac-grunt-cli grunt-cli
+8 verbose lock grunt-cli C:\Users\hp\AppData\Roaming\npm-cache\671ef8ac-grunt-cli.lock
+9 silly lockFile 671ef8ac-grunt-cli grunt-cli
+10 silly lockFile 671ef8ac-grunt-cli grunt-cli
+11 verbose addNamed [ 'grunt-cli', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+14 verbose lock grunt-cli@ C:\Users\hp\AppData\Roaming\npm-cache\d63f3d0b-grunt-cli.lock
+15 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+16 verbose url raw grunt-cli
+17 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-cli' ]
+18 verbose url resolved http://registry.npmjs.org/grunt-cli
+19 info trying registry request attempt 1 at 16:49:00
+20 verbose etag "9WGSBU95PZJAHD0WZGUHPV1R1"
+21 http GET http://registry.npmjs.org/grunt-cli
+22 http 200 http://registry.npmjs.org/grunt-cli
+23 silly registry.get cb [ 200,
+23 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly registry.get     etag: '"10P2I21WACZAIU8P6VSEL4C5O"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=60',
+23 silly registry.get     'content-length': '20446',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     date: 'Thu, 19 Feb 2015 20:49:13 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     age: '19',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-atl6233-ATL',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1424378953.725434,VS0,VE0',
+23 silly registry.get     vary: 'Accept' } ]
+24 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+25 silly addNameRange versions [ 'grunt-cli',
+25 silly addNameRange   [ '0.1.0',
+25 silly addNameRange     '0.1.1',
+25 silly addNameRange     '0.1.2',
+25 silly addNameRange     '0.1.3',
+25 silly addNameRange     '0.1.4',
+25 silly addNameRange     '0.1.5',
+25 silly addNameRange     '0.1.6',
+25 silly addNameRange     '0.1.7',
+25 silly addNameRange     '0.1.8',
+25 silly addNameRange     '0.1.9',
+25 silly addNameRange     '0.1.10',
+25 silly addNameRange     '0.1.11',
+25 silly addNameRange     '0.1.12',
+25 silly addNameRange     '0.1.13' ] ]
+26 verbose addNamed [ 'grunt-cli', '0.1.13' ]
+27 verbose addNamed [ '0.1.13', '0.1.13' ]
+28 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+29 verbose lock grunt-cli@0.1.13 C:\Users\hp\AppData\Roaming\npm-cache\28997503-grunt-cli-0-1-13.lock
+30 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+31 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+32 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+33 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+34 silly resolved [ { name: 'grunt-cli',
+34 silly resolved     description: 'The grunt command line interface.',
+34 silly resolved     version: '0.1.13',
+34 silly resolved     author: { name: 'Grunt Team' },
+34 silly resolved     homepage: 'http://gruntjs.com/',
+34 silly resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+34 silly resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+34 silly resolved     licenses: [ [Object] ],
+34 silly resolved     bin: { grunt: 'bin/grunt' },
+34 silly resolved     engines: { node: '>= 0.8.0' },
+34 silly resolved     scripts: { test: 'node bin/grunt test' },
+34 silly resolved     preferGlobal: true,
+34 silly resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+34 silly resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+34 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+34 silly resolved     readme: '# grunt-cli [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-cli.png?branch=master)](http://travis-ci.org/gruntjs/grunt-cli)\n> The Grunt command line interface.\n\nInstall this globally and you\'ll have access to the `grunt` command anywhere on your system.\n\n```shell\nnpm install -g grunt-cli\n```\n\n**Note:** The job of the `grunt` command is to load and run the version of Grunt you have installed locally to your project, irrespective of its version.  Starting with Grunt v0.4, you should never install Grunt itself globally.  For more information about why, [please read this](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation).\n\nSee the [Getting Started](http://gruntjs.com/getting-started) guide for more information.\n\n## Shell tab auto-completion\nTo enable tab auto-completion for Grunt, add one of the following lines to your `~/.bashrc` or `~/.zshrc` file.\n\n```bash\n# Bash, ~/.bashrc\neval "$(grunt --completion=bash)"\n```\n\n```bash\n# Zsh, ~/.zshrc\neval "$(grunt --completion=zsh)"\n```\n\n## Installing grunt-cli locally\nIf you prefer the idiomatic Node.js method to get started with a project (`npm install && npm test`) then install grunt-cli locally with `npm install grunt-cli --save-dev`. Then add a script to your `package.json` to run the associated grunt command: `"scripts": { "test": "grunt test" } `. Now `npm test` will use the locally installed `./node_modules/.bin/grunt` executable to run your Grunt commands.\n\nTo read more about npm scripts, please visit the npm docs: [https://npmjs.org/doc/misc/npm-scripts.html](https://npmjs.org/doc/misc/npm-scripts.html).\n',
+34 silly resolved     readmeFilename: 'README.md',
+34 silly resolved     _id: 'grunt-cli@0.1.13',
+34 silly resolved     _from: 'grunt-cli@' } ]
+35 info install grunt-cli@0.1.13 into C:\Users\hp\AppData\Roaming\npm
+36 info installOne grunt-cli@0.1.13
+37 info C:\Users\hp\AppData\Roaming\npm\node_modules\grunt-cli unbuild
+38 info preuninstall grunt-cli@0.1.13
+39 info uninstall grunt-cli@0.1.13
+40 verbose true,C:\Users\hp\AppData\Roaming\npm\node_modules,C:\Users\hp\AppData\Roaming\npm\node_modules unbuild grunt-cli@0.1.13
+41 verbose C:\Users\hp\AppData\Roaming\npm,[object Object] binRoot
+42 info postuninstall grunt-cli@0.1.13
+43 info C:\Users\hp\AppData\Roaming\npm\node_modules\grunt-cli unbuild
+44 error Error: ENOTEMPTY, rmdir 'C:\Users\hp\AppData\Roaming\npm\node_modules\grunt-cli\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules'
+45 error If you need help, you may report this log at:
+45 error     <http://github.com/isaacs/npm/issues>
+45 error or email it to:
+45 error     <npm-@googlegroups.com>
+46 error System Windows_NT 6.1.7600
+47 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "grunt-cli"
+48 error cwd G:\Nucleus\nucleus-frontend
+49 error node -v v0.10.17
+50 error npm -v 1.3.8
+51 error path C:\Users\hp\AppData\Roaming\npm\node_modules\grunt-cli\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules
+52 error code ENOTEMPTY
+53 error errno 53
+54 verbose exit [ 53, true ]

@@ -1028,7 +1028,7 @@ h6,
 .h6 {
   font-family: inherit;
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.2;
   color: inherit;
 }
 h1 small,
@@ -2105,7 +2105,7 @@ th {
   padding: 10px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #555D60;
+  border-top: 1px solid #dddddd;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
@@ -2159,6 +2159,7 @@ border-collapse: collapse;
 .table-hover > tbody > tr:hover {
   background-color: #3C4142;
   color: #ebebeb;
+  cursor: pointer;
 }
 table col[class*="col-"] {
   position: static;
@@ -2193,6 +2194,8 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.active:hover > th {
   background-color: #3d4954;
 }
+
+
 .table > thead > tr > td.success,
 .table > tbody > tr > td.success,
 .table > tfoot > tr > td.success,
@@ -2280,6 +2283,8 @@ table th[class*="col-"] {
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
+  padding: 2px;
+  border-bottom: 1px solid #dddddd;
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
@@ -2451,7 +2456,7 @@ input[type="search"] {
   }
 }
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .radio,
 .checkbox {
@@ -2763,6 +2768,7 @@ select[multiple].form-group-lg .form-control {
     text-align: right;
     margin-bottom: 0;
     padding-top: 9px;
+    line-height: 15px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -4557,19 +4563,28 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   cursor: not-allowed;
 }
 .label {
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  color: #F4F4F4;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0;
+display: inline;
+padding: .2em .6em .3em 1.8em;
+font-size: 75%;
+font-weight: bold;
+line-height: 1;
+color: #F4F4F4;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: 30px 0px 0px 30px;
+position: relative;
+}
+.label:before {
+content: ".";
+position: absolute;
+top: 0;
+font-size: 2em;
+font-weight: bold;
+left: 4px;
+line-height: 0.4em;
 }
 label.control-label{
-padding: 9px 0px;
 font-weight: bold;
 }
 a.label:hover,
@@ -4717,7 +4732,7 @@ a.badge:focus {
   padding: 4px;
   margin-bottom: 21px;
   line-height: 1.42857143;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 0;
   -webkit-transition: border 0.2s ease-in-out;
@@ -6476,7 +6491,7 @@ table > tbody > tr > td,
 .table > tbody > tr > td,
 table > tfoot > tr > td,
 .table > tfoot > tr > td {
-  border-color: transparent;
+
 }
 input,
 textarea {

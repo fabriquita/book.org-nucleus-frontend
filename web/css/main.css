@@ -1,0 +1,28 @@
+div#simplediv {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+ 
+	animation-name: simple-animation;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+}
+
+@keyframes simple-animation {
+    0% {
+        left: 0;
+    }
+ 
+    50% {
+        left: 200px;
+        background-color: blue;
+    }
+ 
+    100% {
+        left: 400px;
+    }
+} 
