@@ -35,9 +35,13 @@ angular
         templateUrl: 'views/users/create.html',
         controller: 'UserCreateCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/groups', {
+        templateUrl: 'views/groups/list.html',
+        controller: 'GroupListCtrl'
+      })
+      .when('/groups/create', {
+        templateUrl: 'views/groups/create.html',
+        controller: 'GroupCreateCtrl'
       })
       .otherwise({
         redirectTo: '/'

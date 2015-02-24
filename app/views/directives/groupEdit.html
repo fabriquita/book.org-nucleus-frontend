@@ -1,0 +1,37 @@
+<form class="form-horizontal ng-pristine ng-valid" role="form">
+  <div class="form-group col-md-6">
+    <label class="col-md-4 control-label">Nombre del Grupo</label>
+    <div class="col-md-8">
+      <input class="form-control" type="text" placeholder="Ej. Juan Pablo" ng-model="name">
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+    <label class="col-md-4 control-label">Status</label>
+    <div class="col-md-8">
+      <div class="onoffswitch">
+        <input type="checkbox"
+          ng-model="archived" name="onoffswitch"
+          class="onoffswitch-checkbox" id="myonoffswitch{{id}}" checked>
+
+        <label class="onoffswitch-label" for="myonoffswitch{{id}}">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group col-md-12">
+    <label class="col-md-2 control-label">Descripción</label>
+    <div class="col-md-10">
+      <textarea ng-model="description" rows="3" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="form-group col-md-12 text-center">
+    <button type="submit" class="btn btn-default btn-sm" ng-click="save()">
+      Guadar Datos
+    </button>
+    <button type="submit" class="btn btn-danger btn-sm" ng-click="cancel()">
+      Cancelar
+    </button>
+  </div>
+</form>
