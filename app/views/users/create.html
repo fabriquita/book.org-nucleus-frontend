@@ -1,72 +1,73 @@
 <!-- Page Content -->
-<div id="page-content-wrapper">
-  <div class="container-fluid full-height">
+<div id="page-content-wrapper" class="full-height no-padding">
+  <div class="container-fluid full-height father">
     <div class="row full-height">
-      <h3>Datos de Usuario</h3>
-      <hr/>
-      <div class="col-lg-12">
-        <form class="form-horizontal ng-pristine ng-valid" role="form">
-          <div class="form-group col-md-6">
-            <label class="col-md-4 control-label">Nombre</label>
-            <div class="col-md-8">
-              <input class="form-control" id="focusedInput" type="text" value="Franz Mamani">
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <label class="col-md-4 control-label">Nombre de Usuario</label>
-            <div class="col-md-8">
-              <input class="form-control" id="focusedInput" type="text" value="fmamani">
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <label class="col-sm-4 control-label">Rol</label>
-            <div class="col-sm-8">
-              <select class="form-control">
-                <option selected="" value="Administrator">Administrador</option>
-                <option value="Seller">Secretaria</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <label class="col-sm-4 control-label">Grupo</label>
-            <div class="col-sm-8">
-              <select class="form-control">
-                <option selected="" value="Administrator">Grupo 1</option>
-                <option value="Seller">Grupo 2</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <label class="col-md-4 control-label">Email</label>
-            <div class="col-md-8">
-              <input class="form-control" id="focusedInput" type="text" value="jq@jq.com">
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <label class="col-md-4 control-label">Last Access Date</label>
-            <div class="col-md-8 form-control-static">
-              <p>12/26/2014 12:33</p>
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <label class="col-md-4 control-label">Status</label>
-            <div class="col-md-8">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                  Active
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                  Inactive
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
+        <div class="top-options">
+          <strong>Nuevo Usuario</strong>
+        </div>
+        <div id="#container-bar">                    
+              <form class="form-horizontal ng-pristine ng-valid" role="form">
+                 <div class="form-group col-md-6">
+                   <label class="col-md-4 control-label">Nombres</label>
+                   <div class="col-md-8">
+                     <input class="form-control" id="focusedInput" type="text" placeholder="Ej. Juan Pablo">
+                   </div>
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label class="col-md-4 control-label">Apellidos</label>
+                   <div class="col-md-8">
+                     <input class="form-control" id="focusedInput" type="text" placeholder="Ej. Perez Rodriguez">
+                   </div>
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label class="col-md-4 control-label">Nombre de Usuario</label>
+                   <div class="col-md-8">
+                     <input class="form-control" id="focusedInput" type="text" placeholder="Ej. jperez">
+                   </div>
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label class="col-md-4 control-label">Rol</label>
+                   <div class="col-md-8">
+                     <select class="form-control">
+                        <option selected="" value="Administrator">Administrador</option>
+                        <option value="Seller">Secretaria</option>
+                     </select>
+                   </div>
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label class="col-md-4 control-label">Grupo</label>
+                   <div class="col-md-8">
+                     <select class="form-control">
+                        <option selected="" value="Administrator">Grupo 1</option>
+                        <option value="Seller">Grupo 2</option>
+                     </select>
+                   </div>
+                 </div>
+                 <div class="form-group col-md-6">
+                   <label class="col-md-4 control-label">Status</label>
+                   <div class="col-md-8">                            
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                      
+                   </div>
+                 </div>
+                 <div class="form-group col-md-12">
+                   <label class="col-md-6 control-label">Cambiar Imagen</label>
+                   <div class="col-md-6">
+                     <input type="file" id="exampleInputFile">
+                   </div>
+                 </div>
+                 <div class="form-group col-md-12 text-center bottom-bar">
+                  <button type="submit" class="btn btn-default btn-sm">Guadar Datos</button>
+                  <button type="submit" class="btn btn-danger btn-sm">Cancelar</button>
+                 </div> 
+               </form> 
+        </div>
     </div>
   </div>
 </div>
