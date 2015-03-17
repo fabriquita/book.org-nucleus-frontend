@@ -2,10 +2,19 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+.btn-link{
+    padding: 10px 0;
+}
 /*NavBar*/
 .navbar-brand{
     height: auto;
     padding: 0px;
+}
+.navbar-brand-login{
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 20px 0px;
 }
 .navbar-brand > img{
     margin: 5px 10px;
@@ -382,6 +391,45 @@ box-shadow: inset 0 10px 10px #E0E0E0;
 border-top: 1px solid #9E9E9E;
 }
 /*end switch styles*/
+/*Login*/
+.form-signin {
+  max-width: 330px;
+  padding: 90px 25px 15px 25px;
+  margin: 0 auto;
+  border-right: 1px solid #555D60;
+  border-left: 1px solid #555D60;
+  background-color: #fff;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 @media(min-width:768px) {
     /* Sidebar Styles */
     #wrapper {
