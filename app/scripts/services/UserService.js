@@ -4,14 +4,25 @@ angular.module('nucleusApp')
 .factory('UserService', [
   '$http',
   function($http) {
+    var domain = document.domain;
+    var url = 'http://' + domain + ':8080/user';
+
     return {
-      getByPage: function(page, limit) {
-        var queryString = '?page=' + page + '&limit=' + limit;
-        return $http.get('/json/users.json' + queryString) ;
+      create: function(data) {
+        return $http.put(url, data);
       },
-      // get: function(userId) {
-      //   return $http.get('/users/'+templateId);
-      // }
+      update: function(id, data) {
+        return $http.post(url + id, data);
+      },
+      delete: function(id) {
+        return $http.delete(url + id);
+      },
+      getAll: function() {
+        return $http.get(url + '/');
+      },
+      get: function(id) {
+        return $http.get(url + id);
+      }
     };
   }
 ]);
