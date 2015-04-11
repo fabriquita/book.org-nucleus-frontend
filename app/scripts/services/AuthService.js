@@ -8,7 +8,7 @@ angular.module('nucleusApp')
     var domain = document.domain, url = 'http://' + domain + ':8080';
     return {
       login: function(data) {
-        return $http.post(url + '/login', data);
+        return $http.post(url + '/auth/login', data);
       },
       logout: function(callback) {
         return $http.post(url + '/logout/', {}).then(function(res) {
