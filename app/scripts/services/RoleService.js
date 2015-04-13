@@ -1,15 +1,15 @@
 'use strict';
 
 angular.module('nucleusApp')
-.factory('UserService', [
+.factory('RoleService', [
   '$http',
   function($http) {
     var domain = document.domain;
-    var url = 'http://' + domain + ':8080/user';
+    var url = 'http://' + domain + ':8080/role';
 
     return {
       create: function(data) {
-        return $http.put(url + '/', data);
+        return $http.put(url, data);
       },
       update: function(id, data) {
         return $http.post(url + id, data);
