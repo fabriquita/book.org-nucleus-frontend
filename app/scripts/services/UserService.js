@@ -10,7 +10,14 @@ angular.module('nucleusApp')
 
     return {
       create: function(data) {
-        return $http.put(url + '/', data);
+        console.log(data);
+        return $http.put(url + '/', data, {
+          //TODO: refactor this
+          headers: {
+            credentials: $window.sessionStorage.credentials,
+            principal: $window.sessionStorage.principal
+          }
+        });
       },
       update: function(id, data) {
         return $http.post(url + id, data);
@@ -20,6 +27,7 @@ angular.module('nucleusApp')
       },
       getAll: function() {
         return $http.get(url + '/', {
+          //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,
             principal: $window.sessionStorage.principal
