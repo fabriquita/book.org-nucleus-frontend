@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('nucleusApp', [
     'ngAnimate',
     'ngCookies',
@@ -22,6 +22,10 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'views/auth/login.html',
+        controller: 'AuthCtrl'
       })
       .when('/users', {
         templateUrl: 'views/users/list.html',
@@ -47,3 +51,20 @@ angular
         redirectTo: '/'
       });
   });
+/**
+ * It filters routes, and checks whether the user is logged in or not
+ */
+app.run(['$rootScope', '$location', 'AuthService', function ($rootScope, $location, AuthService) {
+  $rootScope.$on('$locationChangeStart', function (event) {
+    if (AuthService.isLoggedIn()) {
+      console.log('user logged');
+      if ($location.path() === '/login') {
+        $location.url('/');
+      }
+    } else {
+      console.log('user no logged');
+      $location.path('/login');
+      return;
+    }
+  });
+}]);
