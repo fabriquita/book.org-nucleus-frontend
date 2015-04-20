@@ -39,7 +39,7 @@ var app = angular
         templateUrl: 'views/users/create.html',
         controller: 'UserCreateCtrl'
       })
-      .when('/users/edit', {
+      .when('/users/edit/:id', {
         templateUrl: 'views/users/edit.html',
         controller: 'UserEditCtrl'
       })

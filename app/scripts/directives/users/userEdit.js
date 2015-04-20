@@ -35,7 +35,8 @@ angular.module('nucleusApp')
 
         $scope.cancel = function() {
           if (action === 'edit') {
-            $scope.model.edit = false;
+            //$scope.model.edit = false;
+            $location.url('/users');
           } else {
             $location.url('/users');
           }
