@@ -39,6 +39,10 @@ var app = angular
         templateUrl: 'views/users/create.html',
         controller: 'UserCreateCtrl'
       })
+      .when('/users/edit/:id', {
+        templateUrl: 'views/users/edit.html',
+        controller: 'UserEditCtrl'
+      })
       .when('/groups', {
         templateUrl: 'views/groups/list.html',
         controller: 'GroupListCtrl'

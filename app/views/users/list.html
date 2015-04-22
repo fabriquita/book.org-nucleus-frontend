@@ -56,17 +56,26 @@
                 <th>Rol</th>
                 <th>Ultima fecha de Acceso</th>
                 <th>Status</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               <tr ng-repeat="user in users">
                 <td>{{user.name}}</td>
-                <td>{{user.username}}</td>
+                <td>{{user.userName}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.group.name}}</td>
                 <td>{{user.role.name}}</td>
                 <td>{{user.lastAccess}}</td>
-                <td>{{user.status}}</td>
+                <td>
+                  <span class="label" ng-class="{'label-info': user.archived === 'false', 'label-danger' : user.archived === 'true'}">
+                    {{user.archived | userStatusFilter}}
+                    <span class="glyphicon glyphicon-ok-circle"></span>
+                  </span>
+                </td>
+                <td>
+                  <a type="submit" class="btn-default" href="#/users/edit/{{user.id}}"><span class="glyphicon glyphicon-edit"></span></a>
+                </td>
               <tr>
             </tbody>
           </table>

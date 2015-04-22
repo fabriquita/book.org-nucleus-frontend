@@ -24,14 +24,19 @@ angular.module('nucleusApp')
         });
         $scope.id = '0';
         $scope.name = '';
+        $scope.lastName = '';
+        $scope.userName = '';
         $scope.password = '';
+        $scope.email = '';
+        $scope.archived = 'false';
 
 
         var action = $attrs.action || 'edit';
 
         $scope.cancel = function() {
           if (action === 'edit') {
-            $scope.model.edit = false;
+            //$scope.model.edit = false;
+            $location.url('/users');
           } else {
             $location.url('/users');
           }
@@ -40,9 +45,13 @@ angular.module('nucleusApp')
         $scope.save = function() {
           var data = {
             name: $scope.name,
+            lastName: $scope.lastName,
+            userName: $scope.userName,
             password: $scope.password,
             group_id: $scope.group,
-            role_id: $scope.role
+            role_id: $scope.role,
+            email: $scope.email,
+            archived: $scope.archived
           };
 
           if (action === 'edit') {
