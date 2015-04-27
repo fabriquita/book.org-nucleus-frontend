@@ -28,7 +28,6 @@ angular.module('nucleusApp')
         $scope.userName = '';
         $scope.password = '';
         $scope.email = '';
-        $scope.archived = false;
 
 
         var action = $attrs.action || 'edit';
@@ -50,8 +49,7 @@ angular.module('nucleusApp')
             password: $scope.password,
             group_id: $scope.group,
             role_id: $scope.role,
-            email: $scope.email,
-            archived: $scope.archived
+            email: $scope.email
           };
 
           if (action === 'edit') {

@@ -6,7 +6,7 @@ angular.module('nucleusApp')
   'GroupService',
   function($scope, GroupService) {
     $scope.model = {
-      id: 0, name: '', description: '', archived: 'false'
+      id: 0, name: '', description: '', archived: false
     };
 
   }

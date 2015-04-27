@@ -17,7 +17,7 @@ angular.module('nucleusApp')
         $scope.id = $scope.model.id;
         $scope.name = $scope.model.name;
         $scope.description = $scope.model.description;
-        $scope.archived = $scope.model.archived === 'true' ? false : true;
+        $scope.archived = $scope.model.archived === true ? false : true;
 
         var action = $attrs.action || 'edit';
 
@@ -32,8 +32,7 @@ angular.module('nucleusApp')
         $scope.save = function() {
           var data = {
             name: $scope.name,
-            description: $scope.description,
-            archived: (!$scope.archived) + ''
+            description: $scope.description
           };
 
           if (action === 'edit') {
@@ -59,7 +58,6 @@ angular.module('nucleusApp')
         function updateOriginalModel() {
           $scope.model.name = $scope.name;
           $scope.model.description = $scope.description;
-          $scope.model.archived = (!$scope.archived) + '';
         }
       }
     };
