@@ -51,6 +51,14 @@ var app = angular
         templateUrl: 'views/groups/create.html',
         controller: 'GroupCreateCtrl'
       })
+      .when('/roles', {
+        templateUrl: 'views/roles/list.html',
+        controller: 'RoleListCtrl'
+      })
+      .when('/resources', {
+        templateUrl: 'views/resources/list.html',
+        controller: 'ResourceListCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
