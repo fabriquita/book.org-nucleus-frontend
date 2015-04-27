@@ -28,7 +28,7 @@ angular.module('nucleusApp')
         $scope.userName = '';
         $scope.password = '';
         $scope.email = '';
-        $scope.archived = 'false';
+        $scope.archived = false;
 
 
         var action = $attrs.action || 'edit';
