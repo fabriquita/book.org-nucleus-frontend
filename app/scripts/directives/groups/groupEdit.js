@@ -59,6 +59,7 @@ angular.module('nucleusApp')
         function updateOriginalModel() {
           $scope.model.name = $scope.name;
           $scope.model.description = $scope.description;
+          $scope.model.archived = !$scope.archived;
         }
       }
     };
