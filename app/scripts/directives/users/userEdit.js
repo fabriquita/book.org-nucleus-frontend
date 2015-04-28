@@ -42,6 +42,7 @@ angular.module('nucleusApp')
             $scope.email = res.data.email;
             $scope.group = res.data.group.id;
             $scope.role = res.data.role.id;
+            $scope.archived = res.data.archived;
           }, function(err) {
             console.log(err);
           });
@@ -53,6 +54,7 @@ angular.module('nucleusApp')
           // Password is editable?
           //$scope.password = $scope.model.password;
           $scope.email = $scope.model.email;
+          $scope.archived = $scope.model.archived;
         }
 
         $scope.cancel = function() {
