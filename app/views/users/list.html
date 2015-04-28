@@ -61,7 +61,7 @@
             </thead>
             <tbody>
               <tr ng-repeat="user in users">
-                <td>{{user.name}}</td>
+                <td>{{user.name + ' ' + user.lastName}}</td>
                 <td>{{user.userName}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.group.name}}</td>
