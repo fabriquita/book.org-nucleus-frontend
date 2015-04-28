@@ -68,10 +68,10 @@
                 <td>{{user.role.name}}</td>
                 <td>{{user.lastLogin | date:'medium'}}</td>
                 <td>
-                  <!-- <span class="label" ng-class="{'label-info': user.archived === 'false', 'label-danger' : user.archived === 'true'}"> -->
-                    {{user.archived | userStatusFilter}}
-                    <span class="glyphicon glyphicon-ok-circle"></span>
-                  <!-- </span> -->
+                    <span class="label" ng-class="{'label-info': user.archived === false, 'label-danger' : user.archived === true}">
+                      {{user.archived | userStatusFilter}}
+                      <span class="glyphicon glyphicon-ok-circle"></span>
+                    </span>
                 </td>
                 <td>
                   <a type="submit" class="btn-default" href="#/users/edit/{{user.id}}"><span class="glyphicon glyphicon-edit"></span></a>
