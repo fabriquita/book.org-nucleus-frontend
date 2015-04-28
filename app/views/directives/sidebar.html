@@ -2,16 +2,16 @@
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
     <li>
-      <a  href="#/users"><i class="fa fa-user"></i> Usuarios</a>
+      <a ng-class="getClass('/users')"  href="#/users"><i class="fa fa-user"></i> Usuarios</a>
     </li>
     <li>
-      <a class="active" href="#/groups"><i class="fa fa-users"></i> Grupos</a>
+      <a ng-class="getClass('/groups')" href="#/groups"><i class="fa fa-users"></i> Grupos</a>
     </li>
     <li>
-      <a href="#/roles"><i class="fa fa-sitemap"></i> Roles</a>
+      <a ng-class="getClass('/roles')" href="#/roles"><i class="fa fa-sitemap"></i> Roles</a>
     </li>
     <li>
-      <a href="#/resources"><i class="fa fa-sitemap"></i> Recursos</a>
+      <a ng-class="getClass('/resources')" href="#/resources"><i class="fa fa-sitemap"></i> Recursos</a>
     </li>
     <li>
       <a href="#/permissions"><i class="fa fa-file-code-o"></i> Permisos</a>

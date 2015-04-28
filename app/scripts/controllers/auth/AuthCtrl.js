@@ -15,7 +15,7 @@ angular.module('nucleusApp')
       AuthService.login(data).then(function(res){
         console.log('logged in successfully');
         AuthService.setLoggedIn(res.data);
-        $location.url('/');
+        $location.url('/users');
       }, function(err) {
         AuthService.setLoggedIn(false);
         alert('Invalid credentials');

@@ -21,6 +21,14 @@ angular.module('nucleusApp')
         $scope.$on('userLoggedOut', function() {
           $($element).hide();
         });
+
+        $scope.getClass = function(path) {
+          if ($location.path() == path) {
+            return "active";
+          } else {
+            return "";
+          }
+        }
       }
     };
   }

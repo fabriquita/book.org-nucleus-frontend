@@ -7,7 +7,7 @@ angular.module('nucleusApp')
   function($scope, ResourceService) {
     var loadResourceList = function() {
       ResourceService.getAll().then(function(res) {
-        $scope.resources = res.data;
+        $scope.resources = res.data.content;
       }, function(err) {
         console.log(err);
       });
