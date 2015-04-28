@@ -50,7 +50,8 @@ angular.module('nucleusApp')
           $scope.name = $scope.model.name;
           $scope.lastName = $scope.model.lastName;
           $scope.userName = $scope.model.userName;
-          $scope.password = $scope.model.password;
+          // Password is editable?
+          //$scope.password = $scope.model.password;
           $scope.email = $scope.model.email;
         }
 
