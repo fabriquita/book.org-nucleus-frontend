@@ -7,7 +7,7 @@ angular.module('nucleusApp')
   function($scope, GroupService) {
     var loadUserList = function() {
       GroupService.getAll().then(function(res) {
-        $scope.groups = res.data;
+        $scope.groups = res.data.content;
       }, function(err) {
         console.log(err);
       });
