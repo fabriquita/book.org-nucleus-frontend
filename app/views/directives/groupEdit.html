@@ -7,18 +7,15 @@
   </div>
   <div class="form-group col-md-6">
     <label class="col-md-4 control-label">Status</label>
-    <div class="col-md-8">
-      <div class="onoffswitch">
-        <input type="checkbox"
-          ng-model="archived" name="onoffswitch"
-          class="onoffswitch-checkbox" id="myonoffswitch{{id}}" checked>
-
-        <label class="onoffswitch-label" for="myonoffswitch{{id}}">
-          <span class="onoffswitch-inner"></span>
-          <span class="onoffswitch-switch"></span>
-        </label>
-      </div>
-    </div>
+     <div class="col-md-8">
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch{{id}}" class="onoffswitch-checkbox" id="myonoffswitch{{id}}" ng-model='archived'>
+          <label class="onoffswitch-label" for="myonoffswitch{{id}}">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+     </div>
   </div>
   <div class="form-group col-md-12">
     <label class="col-md-2 control-label">Descripción</label>

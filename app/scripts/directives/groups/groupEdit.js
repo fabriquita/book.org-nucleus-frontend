@@ -32,7 +32,8 @@ angular.module('nucleusApp')
         $scope.save = function() {
           var data = {
             name: $scope.name,
-            description: $scope.description
+            description: $scope.description,
+            archived: !$scope.archived
           };
 
           if (action === 'edit') {
