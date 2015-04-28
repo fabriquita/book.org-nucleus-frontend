@@ -16,16 +16,23 @@ angular.module('nucleusApp')
       },
       templateUrl: 'views/directives/userEdit.html',
       controller: function($scope, $element, $attrs) {
+        // Preload groups
         GroupService.getAll().then(function(res) {
           $scope.groups = res.data.content;
         });
+        // Preload roles
         RoleService.getAll().then(function(res) {
           $scope.roles = res.data.content;
         });
 
+        // Get action 'create' or 'edit'
         var action = $attrs.action;
 
-        if (action == 'edit') {
+        // TODO: refactor this
+        // Get model values
+        // 'edit' return a promise
+        // 'create' return the model itself
+        if (action === 'edit') {
           $scope.model.then(function(res) {
             $scope.id = res.data.id;
             $scope.name = res.data.name;
@@ -38,7 +45,7 @@ angular.module('nucleusApp')
           }, function(err) {
             console.log(err);
           });
-        } else {
+        } else if (action === 'create') {
           $scope.id = $scope.model.id;
           $scope.name = $scope.model.name;
           $scope.lastName = $scope.model.lastName;
@@ -70,8 +77,9 @@ angular.module('nucleusApp')
           if (action === 'edit') {
             UserService.update($scope.id, data)
             .then(function(res){
+              console.log('user updated');
               updateOriginalModel();
-              // Finish edit
+              $location.url('/users');
               $scope.model.edit = false;
             }, function(err) {
               console.log(err);
