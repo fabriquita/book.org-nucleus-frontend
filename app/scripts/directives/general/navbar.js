@@ -4,7 +4,8 @@ angular.module('nucleusApp')
 .directive('nucleusNavbar', [
   'AuthService',
   '$location',
-  function(AuthService, $location) {
+  '$window',
+  function(AuthService, $location, $window) {
     return {
       restrict: 'E',
       templateUrl: 'views/directives/navbar.html',
@@ -13,6 +14,7 @@ angular.module('nucleusApp')
           $($element).hide();
         } else {
           $($element).show();
+          $scope.principal = $window.sessionStorage.principal;
         }
 
         $scope.logout = function() {
