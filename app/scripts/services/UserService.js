@@ -31,8 +31,8 @@ angular.module('nucleusApp')
       delete: function(id) {
         return $http.delete(url + id);
       },
-      getAll: function() {
-        return $http.get(url + '/', {
+      getAll: function(page, size) {
+        return $http.get(url + '/' + '?page=' + (page || 0) + '&size=' + (size || 10), {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,

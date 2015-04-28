@@ -5,14 +5,10 @@ angular.module('nucleusApp')
   '$scope',
   'ResourceService',
   function($scope, ResourceService) {
-    var loadResourceList = function() {
-      ResourceService.getAll().then(function(res) {
-        $scope.resources = res.data.content;
-      }, function(err) {
-        console.log(err);
-      });
-    };
+    $scope.service = ResourceService;
 
-    loadResourceList();
+    $scope.onResourcesLoaded = function(res) {
+      $scope.resources = res;
+    };
   }
 ]);
