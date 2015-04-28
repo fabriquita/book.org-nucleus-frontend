@@ -6,7 +6,7 @@ angular.module('nucleusApp')
   '$window',
   function($http, $window) {
     var domain = document.domain;
-    var url = 'http://' + domain + ':8080/role';
+    var url = 'http://' + domain + ':8080/role/';
 
     return {
       create: function(data) {
@@ -18,8 +18,8 @@ angular.module('nucleusApp')
       delete: function(id) {
         return $http.delete(url + id);
       },
-      getAll: function() {
-        return $http.get(url + '/', {
+      getAll: function(page, size) {
+        return $http.get(url + '?page=' + (page || 0) + '&size=' + (size || 10), {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,

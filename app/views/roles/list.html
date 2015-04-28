@@ -38,7 +38,7 @@
             <a href="new-user.html">X</a>
             <a href="new-user.html">Y</a>
             <a href="new-user.html">Z</a>
-          </div>  
+          </div>
         </form>
         <div class="clearfix"></div>
         <hr/>
@@ -54,29 +54,10 @@
               <tr ng-repeat="role in roles">
                 <td>{{role.name}}</td>
                 <td>{{role.group.name}}</td>
-                <!-- <td>
-                  <span class="label" ng-class="{'label-info': user.archived === 'false', 'label-danger' : user.archived === 'true'}">
-                    {{user.archived | userStatusFilter}}
-                    <span class="glyphicon glyphicon-ok-circle"></span>
-                  </span>
-                </td>
-                <td>
-                  <a type="submit" class="btn-default" href="#/users/edit/{{user.id}}"><span class="glyphicon glyphicon-edit"></span></a>
-                </td> -->
-              <tr>
+              </tr>
             </tbody>
           </table>
-          <nav class="text-center">
-             <ul class="pagination pagination-sm no-margin">
-              <li class="disabled"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
-            </ul>
-          </nav>
+          <paginator service="service" page="0" size="1" callback="onRolesLoaded"></paginator>
         </div>
       </div>
     </div>

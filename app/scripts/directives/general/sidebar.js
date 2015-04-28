@@ -23,12 +23,12 @@ angular.module('nucleusApp')
         });
 
         $scope.getClass = function(path) {
-          if ($location.path() == path) {
-            return "active";
+          if ($location.path() === path) {
+            return 'active';
           } else {
-            return "";
+            return '';
           }
-        }
+        };
       }
     };
   }

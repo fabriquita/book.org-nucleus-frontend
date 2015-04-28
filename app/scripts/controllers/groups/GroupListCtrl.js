@@ -5,18 +5,14 @@ angular.module('nucleusApp')
   '$scope',
   'GroupService',
   function($scope, GroupService) {
-    var loadUserList = function() {
-      GroupService.getAll().then(function(res) {
-        $scope.groups = res.data.content;
-      }, function(err) {
-        console.log(err);
-      });
+    $scope.service = GroupService;
+
+    $scope.onGroupsLoaded = function(res) {
+      $scope.groups = res;
     };
 
     $scope.edit = function(index) {
       $scope.groups[index].edit = !$scope.groups[index].edit;
     };
-
-    loadUserList();
   }
 ]);
