@@ -71,10 +71,13 @@ angular.module('nucleusApp')
             name: $scope.name,
             lastName: $scope.lastName,
             userName: $scope.userName,
-            password: $scope.password,
+            //password: $scope.password,
+            // TODO: check this
+            password: 'none',
             group_id: $scope.group,
             role_id: $scope.role,
-            email: $scope.email
+            email: $scope.email,
+            archived: $scope.archived
           };
 
           if (action === 'edit') {
@@ -104,6 +107,10 @@ angular.module('nucleusApp')
           $scope.model.password = $scope.description;
           $scope.group = '0';
           $scope.role = '0';*/
+        }
+
+        function updateArchived() {
+          $scope.archived = !$scope.archived;
         }
       }
     };
