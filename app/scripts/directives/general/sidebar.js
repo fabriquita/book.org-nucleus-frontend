@@ -23,7 +23,7 @@ angular.module('nucleusApp')
         });
 
         $scope.getClass = function(path) {
-          if ($location.path() == path) {
+          if ($location.path().indexOf(path) > -1) {
             return "active";
           } else {
             return "";
