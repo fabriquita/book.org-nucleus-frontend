@@ -68,8 +68,6 @@ var app = angular
  */
 app.run(['$rootScope', '$location', 'AuthService', function ($rootScope, $location, AuthService) {
   $rootScope.$on('$locationChangeStart', function (event) {
-    console.log('event');
-    console.log(event);
     if (AuthService.isLoggedIn()) {
       console.log('user logged');
       if ($location.path() === '/login') {

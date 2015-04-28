@@ -2,6 +2,10 @@
 
 angular.module('nucleusApp')
 .controller('UserEditCtrl', [
-  function ($scope) {
+  '$scope',
+  '$routeParams',
+  'UserService',
+  function ($scope, $routeParams, UserService) {
+    $scope.user = UserService.get($routeParams.id);
   }
 ]);

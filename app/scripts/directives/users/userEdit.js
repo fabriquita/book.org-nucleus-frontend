@@ -12,25 +12,40 @@ angular.module('nucleusApp')
       restrict: 'E',
       scope: {
         model: '=model',
-        action: '=?action'
+        action: '=action'
       },
       templateUrl: 'views/directives/userEdit.html',
       controller: function($scope, $element, $attrs) {
         GroupService.getAll().then(function(res) {
-          $scope.groups = res.data;
+          $scope.groups = res.data.content;
         });
         RoleService.getAll().then(function(res) {
-          $scope.roles = res.data;
+          $scope.roles = res.data.content;
         });
-        $scope.id = '0';
-        $scope.name = '';
-        $scope.lastName = '';
-        $scope.userName = '';
-        $scope.password = '';
-        $scope.email = '';
 
+        var action = $attrs.action;
 
-        var action = $attrs.action || 'edit';
+        if (action == 'edit') {
+          $scope.model.then(function(res) {
+            $scope.id = res.data.id;
+            $scope.name = res.data.name;
+            $scope.lastName = res.data.lastName;
+            $scope.userName = res.data.userName;
+            $scope.password = res.data.password;
+            $scope.email = res.data.email;
+            $scope.group = res.data.group.id;
+            $scope.role = res.data.role.id;
+          }, function(err) {
+            console.log(err);
+          });
+        } else {
+          $scope.id = $scope.model.id;
+          $scope.name = $scope.model.name;
+          $scope.lastName = $scope.model.lastName;
+          $scope.userName = $scope.model.userName;
+          $scope.password = $scope.model.password;
+          $scope.email = $scope.model.email;
+        }
 
         $scope.cancel = function() {
           if (action === 'edit') {

@@ -35,7 +35,13 @@ angular.module('nucleusApp')
         });
       },
       get: function(id) {
-        return $http.get(url + id);
+        return $http.get(url + '/' + id, {
+          //TODO: refactor this
+          headers: {
+            credentials: $window.sessionStorage.credentials,
+            principal: $window.sessionStorage.principal
+          }
+        });
       }
     };
   }
