@@ -84,7 +84,6 @@ angular.module('nucleusApp')
             UserService.update($scope.id, data)
             .then(function(res){
               console.log('user updated');
-              updateOriginalModel();
               $location.url('/users');
               $scope.model.edit = false;
             }, function(err) {
@@ -94,20 +93,12 @@ angular.module('nucleusApp')
             UserService.create(data)
             .then(function(res) {
               console.log('user created');
-              updateOriginalModel();
               $location.url('/users');
             }, function(err) {
               console.log('error creating user');
             });
           }
         };
-
-        function updateOriginalModel() {
-          /*$scope.model.name = '';
-          $scope.model.password = $scope.description;
-          $scope.group = '0';
-          $scope.role = '0';*/
-        }
 
         function updateArchived() {
           $scope.archived = !$scope.archived;
