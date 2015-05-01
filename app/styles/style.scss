@@ -372,14 +372,14 @@ cursor: pointer;
 .table-hover > tbody > tr > td:last-child{
 position: relative;
 }
-.table-hover > tbody > tr:hover > td:last-child:after{
+/*.table-hover > tbody > tr:hover > td:last-child:after{
 font-family: 'Glyphicons Halflings';
 content: "\270f";
 position: absolute;
 top: 8px;
 right: 8px;
 font-size: 1.5em;
-}
+}*/
 .table-hover > tbody > tr:hover > td.row-edit:last-child:after{
 content: "";
 }
