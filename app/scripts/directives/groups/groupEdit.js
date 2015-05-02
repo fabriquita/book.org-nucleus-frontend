@@ -14,12 +14,16 @@ angular.module('nucleusApp')
       },
       templateUrl: 'views/directives/groupEdit.html',
       controller: function($scope, $element, $attrs) {
+        var action = $attrs.action || 'edit';
+        $scope.action = action;
+        
         $scope.id = $scope.model.id;
         $scope.name = $scope.model.name;
         $scope.description = $scope.model.description;
-        $scope.archived = $scope.model.archived === true ? false : true;
-
-        var action = $attrs.action || 'edit';
+        // Don't send archived when action is create
+        if (action == 'edit') {
+          $scope.archived = $scope.model.archived === true ? false : true;
+        }
 
         $scope.cancel = function() {
           if (action === 'edit') {
@@ -33,7 +37,7 @@ angular.module('nucleusApp')
           var data = {
             name: $scope.name,
             description: $scope.description,
-            archived: !$scope.archived
+            archived: ($scope.archived != undefined)? !$scope.archived: null
           };
 
           if (action === 'edit') {
