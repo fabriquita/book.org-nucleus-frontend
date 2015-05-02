@@ -4,11 +4,16 @@ angular.module('nucleusApp')
 .controller('RoleListCtrl', [
   '$scope',
   'RoleService',
-  function($scope, RoleService) {
+  '$location',
+  function($scope, RoleService, $location) {
     $scope.service = RoleService;
 
     $scope.onRolesLoaded = function(res) {
       $scope.roles = res;
+    };
+    
+    $scope.editRole = function(roleId) {
+      $location.path('/roles/edit/' + roleId);
     };
   }
 ]);

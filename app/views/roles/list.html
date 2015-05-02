@@ -39,6 +39,9 @@
             <a href="new-user.html">Y</a>
             <a href="new-user.html">Z</a>
           </div>
+          <div class="form-group col-sm-3 text-right no-padding no-margin">
+            <a type="submit" class="btn btn-default" href="#/roles/create"><span class="glyphicon glyphicon-plus"></span> Nuevo Rol</a>
+          </div>
         </form>
         <div class="clearfix"></div>
         <hr/>
@@ -47,6 +50,7 @@
             <thead>
               <tr>
                 <th>Nombre del Rol</th>
+                <th>Descripcion</th>
                 <th>Grupo</th>
                 <th></th>
               </tr>
@@ -54,9 +58,10 @@
             <tbody>
               <tr ng-repeat="role in roles">
                 <td>{{role.name}}</td>
+                <td>{{role.description}}</td>
                 <td>{{role.group.name}}</td>
                 <td>
-                  <a href="javascript:(0)" ng-click="edit($index)">
+                  <a href="javascript:(0)" ng-click="editRole($index)">
                     <i class="fa fa-pencil"></i>
                   </a>
                 </td>

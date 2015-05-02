@@ -55,6 +55,10 @@ var app = angular
         templateUrl: 'views/roles/list.html',
         controller: 'RoleListCtrl'
       })
+      .when('/roles/create/', {
+        templateUrl: 'views/roles/create.html',
+        controller: 'RoleCreateCtrl'
+      })
       .when('/resources', {
         templateUrl: 'views/resources/list.html',
         controller: 'ResourceListCtrl'

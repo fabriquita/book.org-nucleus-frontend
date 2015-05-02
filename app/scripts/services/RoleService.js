@@ -10,10 +10,22 @@ angular.module('nucleusApp')
 
     return {
       create: function(data) {
-        return $http.put(url, data);
+        return $http.put(url, data, {
+          //TODO: refactor this
+          headers: {
+            credentials: $window.sessionStorage.credentials,
+            principal: $window.sessionStorage.principal
+          }
+        });
       },
       update: function(id, data) {
-        return $http.post(url + id, data);
+        return $http.post(url + id, data, {
+          //TODO: refactor this
+          headers: {
+            credentials: $window.sessionStorage.credentials,
+            principal: $window.sessionStorage.principal
+          }
+        });
       },
       delete: function(id) {
         return $http.delete(url + id);
