@@ -25,6 +25,9 @@ angular.module('nucleusApp')
         $scope.id = $scope.model.id;
         $scope.name = $scope.model.name;
         $scope.description = $scope.model.description;
+        if (action === 'edit') {
+          $scope.group = $scope.model.group.id;
+        }
 
         $scope.cancel = function() {
           if (action === 'edit') {
@@ -64,6 +67,11 @@ angular.module('nucleusApp')
         function updateOriginalModel() {
           $scope.model.name = $scope.name;
           $scope.model.description = $scope.description;
+          GroupService.get($scope.group).then(function(res) {
+            $scope.model.group = res.data;
+          }, function(err) {
+            console.log(err);
+          });
         }
       }
     };

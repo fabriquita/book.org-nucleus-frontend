@@ -12,8 +12,8 @@ angular.module('nucleusApp')
       $scope.roles = res;
     };
     
-    $scope.editRole = function(roleId) {
-      $location.path('/roles/edit/' + roleId);
+    $scope.edit = function(index) {
+      $scope.roles[index].edit = !$scope.roles[index].edit;
     };
   }
 ]);
