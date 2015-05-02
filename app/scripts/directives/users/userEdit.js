@@ -36,7 +36,7 @@ angular.module('nucleusApp')
         if (action === 'edit') {
           $scope.model.then(function(res) {
             $scope.id = res.data.id;
-            $scope.name = res.data.name;
+            $scope.firstName = res.data.firstName;
             $scope.lastName = res.data.lastName;
             $scope.userName = res.data.userName;
             $scope.password = res.data.password;
@@ -49,7 +49,7 @@ angular.module('nucleusApp')
           });
         } else if (action === 'create') {
           $scope.id = $scope.model.id;
-          $scope.name = $scope.model.name;
+          $scope.firstName = $scope.model.firstName;
           $scope.lastName = $scope.model.lastName;
           $scope.userName = $scope.model.userName;
           // Password is editable?
@@ -70,7 +70,7 @@ angular.module('nucleusApp')
 
         $scope.save = function() {
           var data = {
-            name: $scope.name,
+            firstName: $scope.firstName,
             lastName: $scope.lastName,
             userName: $scope.userName,
             //password: $scope.password,

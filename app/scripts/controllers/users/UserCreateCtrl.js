@@ -6,7 +6,7 @@ angular.module('nucleusApp')
   function ($scope) {
     $scope.model = {
       id: 0,
-      name: '',
+      firstName: '',
       lastName: '',
       userName: '',
       password: '',
