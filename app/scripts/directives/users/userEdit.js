@@ -27,6 +27,7 @@ angular.module('nucleusApp')
 
         // Get action 'create' or 'edit'
         var action = $attrs.action;
+        $scope.action = action;
 
         // TODO: refactor this
         // Get model values
@@ -54,7 +55,8 @@ angular.module('nucleusApp')
           // Password is editable?
           //$scope.password = $scope.model.password;
           $scope.email = $scope.model.email;
-          $scope.archived = $scope.model.archived === true ? false : true;
+          // Don't send archived
+          //$scope.archived = $scope.model.archived === true ? false : true;
         }
 
         $scope.cancel = function() {
@@ -77,7 +79,7 @@ angular.module('nucleusApp')
             group_id: $scope.group,
             role_id: $scope.role,
             email: $scope.email,
-            archived: !$scope.archived
+            archived: ($scope.archived != undefined)? !$scope.archived: null
           };
 
           if (action === 'edit') {

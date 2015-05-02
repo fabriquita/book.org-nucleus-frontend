@@ -10,8 +10,7 @@ angular.module('nucleusApp')
       lastName: '',
       userName: '',
       password: '',
-      email:'',
-      archived: false
+      email:''
     };
   }
 ]);
