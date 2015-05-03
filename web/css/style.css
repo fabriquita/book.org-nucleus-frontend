@@ -124,7 +124,7 @@ margin-right: 5px;
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    padding: 15px 5px;
+    padding: 10px 5px;
 }
 .sidebar-nav li a:hover {
     text-decoration: none;
@@ -372,17 +372,7 @@ cursor: pointer;
 .table-hover > tbody > tr > td:last-child{
 position: relative;  
 }
-.table-hover > tbody > tr:hover > td:last-child:after{
-font-family: 'Glyphicons Halflings';
-content: "\270f";
-position: absolute;
-top: 8px;
-right: 8px;
-font-size: 1.5em;
-}
-.table-hover > tbody > tr:hover > td.row-edit:last-child:after{
-content: "";
-}
+
 .table-hover > tbody > tr > td.row-edit{
 background-color: #fff;
 color: #3C4142;

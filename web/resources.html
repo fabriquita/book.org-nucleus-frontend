@@ -81,46 +81,55 @@
       <div id="page-content-wrapper" class="full-height no-padding">
         <div class="container-fluid full-height father">
           <div class="row full-height">
-              <div class="top-options">
-                <strong>Nuevo Rol</strong>
+            <div class="top-options">
+              <form class="ng-pristine ng-valid" role="form">
+                <div class="form-group col-sm-6 no-padding no-margin">
+                  <div class="input-group">
+                    <label class="sr-only">Keyword</label>
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                    <input class="form-control" placeholder="Buscar Rol ...">
+                  </div>
+                </div>                
+                <div class="form-group col-sm-6 text-right no-padding no-margin"> 
+                  <a class="btn btn-default btn-sm" href="new-role.html"><span class="glyphicon glyphicon-plus"></span> Nuevo Recurso</a>
+                </div>  
+              </form>
+              <div class="clearfix"></div>
+            </div> 
+            <div id="container-bar">
+              <div class="table-responsive">
+                <table class="table table-hover no-margin">
+                  <thead>
+                    <tr>
+                      <th><a class="fa fa-angle-down"></a> Nombre del Recurso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Administrador</td>
+                    </tr>
+                   
+                    <tr>
+                      <td>Secretaria</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div id="#container-bar">                    
-                        <form class="form-horizontal ng-pristine ng-valid" role="form">
-                          <div class="form-group col-md-6">
-                            <label class="col-md-4 control-label">Nombre del Rol</label>
-                            <div class="col-md-8">
-                              <input class="form-control" id="focusedInput" type="text" placeholder="Ej. Administrador">
-                            </div>
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label class="col-md-4 control-label">Status</label>
-                            <div class="col-md-8">                            
-                                 <div class="onoffswitch">
-                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                                     <label class="onoffswitch-label" for="myonoffswitch">
-                                         <span class="onoffswitch-inner"></span>
-                                         <span class="onoffswitch-switch"></span>
-                                     </label>
-                                 </div>
-                               
-                            </div>
-                          </div>
-                          <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label">Descripción</label>
-                            <div class="col-md-10">
-                              <textarea rows="3" class="form-control">At w3schools.com you will learn how to make a website</textarea>
-                            </div>
-                          </div>   
-                        
-                       <div class="form-group col-md-12 text-center bottom-bar">
-                        <button type="submit" class="btn btn-default btn-sm">Guadar Datos</button>
-                        <button type="submit" class="btn btn-danger btn-sm">Cancelar</button>                       
-                       </div> 
-
-
-                     </form> 
-              </div>
+              <nav class="text-center">
+                 <ul class="pagination pagination-sm no-margin">
+                  <li class="disabled"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
+
+
         </div>
       </div>
 
@@ -144,5 +153,5 @@
         
     </body>
 </html>
-
+ 
 
