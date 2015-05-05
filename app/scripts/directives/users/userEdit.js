@@ -43,7 +43,7 @@ angular.module('nucleusApp')
             $scope.email = res.data.email;
             $scope.group = res.data.group.id;
             $scope.role = res.data.role.id;
-            $scope.archived = res.data.archived === true ? false : true;
+            $scope.active = res.data.active;
           }, function(err) {
             console.log(err);
           });
@@ -55,8 +55,6 @@ angular.module('nucleusApp')
           // Password is editable?
           //$scope.password = $scope.model.password;
           $scope.email = $scope.model.email;
-          // Don't send archived
-          //$scope.archived = $scope.model.archived === true ? false : true;
         }
 
         $scope.cancel = function() {
@@ -79,7 +77,7 @@ angular.module('nucleusApp')
             group_id: $scope.group,
             role_id: $scope.role,
             email: $scope.email,
-            archived: ($scope.archived != undefined)? !$scope.archived: null
+            active: ($scope.active != undefined)? $scope.active: null
           };
 
           if (action === 'edit') {
@@ -103,7 +101,7 @@ angular.module('nucleusApp')
         };
 
         function updateArchived() {
-          $scope.archived = !$scope.archived;
+          $scope.active = $scope.active;
         }
       }
     };

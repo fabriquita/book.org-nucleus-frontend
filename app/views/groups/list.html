@@ -60,8 +60,8 @@
                 <td>{{group.name}}</td>
                 <td>{{group.description}}</td>
                 <td>
-                  <span class="label" ng-class="{'label-info': group.archived === false, 'label-danger' : group.archived === true}">
-                    {{group.archived | groupStatusFilter}}
+                  <span class="label" ng-class="{'label-info': group.active === true, 'label-danger' : group.active === false}">
+                    {{group.active | groupStatusFilter}}
                     <span class="glyphicon glyphicon-ok-circle"></span>
                   </span>
                 </td>

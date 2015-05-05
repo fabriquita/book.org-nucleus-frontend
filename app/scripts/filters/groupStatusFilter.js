@@ -3,10 +3,10 @@
 angular.module('nucleusApp')
 .filter('groupStatusFilter', [
   function() {
-    return function(archived) {
-      if (archived === false) {
+    return function(active) {
+      if (active === true) {
         return 'ACTIVE';
-      } else if (archived === true) {
+      } else if (active === false) {
         return 'INACTIVE';
       }
     };

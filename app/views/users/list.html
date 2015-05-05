@@ -68,8 +68,8 @@
                 <td>{{user.role.name}}</td>
                 <td>{{user.lastLogin | date:'medium'}}</td>
                 <td>
-                    <span class="label" ng-class="{'label-info': user.archived === false, 'label-danger' : user.archived === true}">
-                      {{user.archived | userStatusFilter}}
+                    <span class="label" ng-class="{'label-info': user.active === true, 'label-danger' : user.active === false}">
+                      {{user.active | userStatusFilter}}
                       <span class="glyphicon glyphicon-ok-circle"></span>
                     </span>
                 </td>
