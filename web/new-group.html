@@ -82,13 +82,56 @@
                 <strong>Nuevo Grupo</strong>
               </div>
               <div id="#container-bar">                    
-                        <form class="form-horizontal ng-pristine ng-valid" role="form">
-                          <div class="form-group col-md-6">
-                            <label class="col-md-4 control-label">Nombredel Grupo</label>
+                       <form class="form-horizontal ng-pristine ng-valid" role="form">
+                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                          <h4 id="oh-snap!-you-got-an-error!"><i class="fa fa-times-circle"></i> Oh snap! You got an error!<a class="anchorjs-link" href="#oh-snap!-you-got-an-error!"><span class="anchorjs-icon"></span></a></h4>
+                          <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                          <p class="text-center">
+                            <button type="button" class="btn btn-primary btn-sm">Take this action</button>
+                            <button type="button" class="btn btn-default btn-sm">Or do this</button>
+                          </p>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                          <h4 id="oh-snap!-you-got-an-error!"><i class="fa fa-exclamation-triangle"></i> Careful, warning!<a class="anchorjs-link" href="#oh-snap!-you-got-an-error!"><span class="anchorjs-icon"></span></a></h4>
+                          <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                          <p class="text-center">
+                            <button type="button" class="btn btn-primary btn-sm">Take this action</button>
+                            <button type="button" class="btn btn-default btn-sm">Or do this</button>
+                          </p>
+                        </div>
+                        <div class="alert alert-info alert-dismissible fade in" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                          <h4 id="oh-snap!-you-got-an-error!"><i class="fa fa-info-circle"></i> Information message<a class="anchorjs-link" href="#oh-snap!-you-got-an-error!"><span class="anchorjs-icon"></span></a></h4>
+                          <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                          <p class="text-center">
+                            <button type="button" class="btn btn-primary btn-sm">Take this action</button>
+                            <button type="button" class="btn btn-default btn-sm">Or do this</button>
+                          </p>
+                        </div>                                                
+                          <div class="form-group col-md-6 has-error">
+                            <label class="col-md-4 control-label">Nombre del Grupo <i class="fa fa-asterisk"></i></label>
                             <div class="col-md-8">
                               <input class="form-control" id="focusedInput" type="text" placeholder="Ej. Juan Pablo">
                             </div>
                           </div>
+                          <div class="form-group col-md-6 has-error">
+                            <label class="col-md-4 control-label">Grupo padre  <i class="fa fa-asterisk"></i></label>
+                            <div class="col-md-8">
+                              <select class="form-control">
+                                 <option selected="" value="Administrator">Grupo 1</option>
+                                 <option value="Seller">Grupo 2</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label class="col-md-4 control-label">Descripción</label>
+                            <div class="col-md-8">
+                              <textarea rows="3" class="form-control">At w3schools.com you will learn how to make a website</textarea>
+                            </div>
+                          </div>                           
                           <div class="form-group col-md-6">
                             <label class="col-md-4 control-label">Status</label>
                             <div class="col-md-8">                            
@@ -102,17 +145,15 @@
                                
                             </div>
                           </div>
-                          <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label">Descripción</label>
-                            <div class="col-md-10">
-                              <textarea rows="3" class="form-control">At w3schools.com you will learn how to make a website</textarea>
-                            </div>
-                          </div>                      
+                       <div class="form-group col-md-12 text-center">
+                        <label class="control-label"> Campos requeridos marcados con: <i class="fa fa-asterisk"></i></label>                     
+                       </div>     
                        <div class="form-group col-md-12 text-center bottom-bar">
                         <button type="submit" class="btn btn-default btn-sm">Guadar Datos</button>
                         <button type="submit" class="btn btn-danger btn-sm">Cancelar</button>                       
                        </div> 
                      </form> 
+
               </div>
           </div>
         </div>

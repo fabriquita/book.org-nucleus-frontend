@@ -86,8 +86,12 @@
                     <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
                     <input class="form-control" placeholder="Buscar grupo ...">
                   </div>
+                </div>
+                <div class="form-group col-sm-3">
+                  <button class="btn btn-primary btn-sm active" data-toggle="tooltip" data-placement="bottom" title="Ver registros activos"><i class="fa fa-eye fa-lg"></i></button> 
+                  <button class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Ver registros inactivos" ><i class="fa fa-eye-slash fa-lg"></i></button> 
                 </div>                
-                <div class="form-group col-sm-6 text-right no-padding no-margin"> 
+                <div class="form-group col-sm-3 text-right no-padding no-margin">                  
                   <a class="btn btn-default btn-sm" href="new-group.html"><span class="glyphicon glyphicon-plus"></span> Nuevo grupo</a>
                 </div>  
               </form>
@@ -99,7 +103,8 @@
                   <thead>
                     <tr>
                       <th width="20%"><a class="fa fa-angle-down"></a> Nombre del Grupo</th>
-                      <th width="60%">Descripcion</th>
+                      <th width="20%"><a class="fa fa-angle-down"></a> Grupo padre</th>
+                      <th width="40%">Descripcion</th>
                       <th width="10%">Status</th>
                       <th width="10%">Editar</th>                      
                     </tr>
@@ -107,6 +112,7 @@
                   <tbody>
                     <tr>
                       <td>Grupo 1</td>
+                      <td>Root</td>
                       <td>Adipiscing per nulla nec class blandit id sociosqu vivamus pretium nam non a augue auctor condimentum etiam vitae et imperdiet a a eget aliquam aliquet elit dictum nulla integer.</td>
                       <td><span class="label label-info">ACTIVO <span class="glyphicon glyphicon-ok-circle"></span></span></td>
                       <td><a class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Editar</a></td>
@@ -115,13 +121,29 @@
                       <td colspan="4" class="row-edit">
 
 
-                        <form class="form-horizontal ng-pristine ng-valid" role="form">
+                       <form class="form-horizontal ng-pristine ng-valid" role="form">
                           <div class="form-group col-md-6">
-                            <label class="col-md-4 control-label">Nombredel Grupo</label>
+                            <label class="col-md-4 control-label">Nombre del Grupo</label>
                             <div class="col-md-8">
                               <input class="form-control" id="focusedInput" type="text" placeholder="Ej. Juan Pablo">
                             </div>
                           </div>
+                          <div class="form-group col-md-6">
+                            <label class="col-md-4 control-label">Grupo padre</label>
+                            <div class="col-md-8">
+                              <select class="form-control">
+                                 <option selected="" value="Administrator">Grupo 1</option>
+                                 <option value="Seller">Grupo 2</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label class="col-md-4 control-label">Descripción</label>
+                            <div class="col-md-8">
+                              <textarea rows="3" class="form-control">At w3schools.com you will learn how to make a website</textarea>
+                            </div>
+                          </div>                           
                           <div class="form-group col-md-6">
                             <label class="col-md-4 control-label">Status</label>
                             <div class="col-md-8">                            
@@ -135,17 +157,12 @@
                                
                             </div>
                           </div>
-                          <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label">Descripción</label>
-                            <div class="col-md-10">
-                              <textarea rows="3" class="form-control">At w3schools.com you will learn how to make a website</textarea>
-                            </div>
-                          </div>                      
-                          <div class="form-group col-md-12 text-center">
-                           <button type="submit" class="btn btn-default btn-sm">Guadar Datos</button>
-                           <button type="submit" class="btn btn-danger btn-sm">Cancelar</button>                       
-                          </div>
-                        </form> 
+                     
+                       <div class="form-group col-md-12 text-center bottom-bar">
+                        <button type="submit" class="btn btn-default btn-sm">Guadar Datos</button>
+                        <button type="submit" class="btn btn-danger btn-sm">Cancelar</button>                       
+                       </div> 
+                     </form> 
 
 
 
@@ -155,6 +172,7 @@
                     </tr>
                     <tr>
                       <td>Grupo 2</td>
+                      <td>Root</td>
                       <td>Adipiscing per nulla nec class blandit id sociosqu vivamus pretium nam non a augue auctor condimentum etiam vitae et imperdiet a a eget aliquam aliquet elit dictum nulla integer.</td>
                       <td><span class="label label-danger">INACTIVO <span class="glyphicon glyphicon-remove-circle"></span></span></td>
                       <td><a class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Editar</a></td>
@@ -196,8 +214,13 @@
     <script src="js/bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
 
-        <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>     
-        
+    <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+
     </body>
 </html>
  

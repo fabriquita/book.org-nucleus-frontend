@@ -39,6 +39,14 @@ margin-right: 5px;
 .main-container{
     padding-top: 75px;
 }
+.alert {
+  color: #ffffff;
+  width: 50%;
+  margin: 10px auto;
+}
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  color: #fff;
+}
 /*end NavBar*/
 /* Sidebar Styles */
 #wrapper {
