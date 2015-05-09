@@ -39,7 +39,7 @@ angular.module('nucleusApp')
             $scope.firstName = res.data.firstName;
             $scope.lastName = res.data.lastName;
             $scope.userName = res.data.userName;
-            // Don't edit password
+            // Don't get password
             //$scope.password = res.data.password;
             $scope.email = res.data.email;
             $scope.group = res.data.group.id;
@@ -69,11 +69,11 @@ angular.module('nucleusApp')
 
         $scope.save = function() {
           var data = {
-            firstName: $scope.firstName,
-            lastName: $scope.lastName,
-            userName: $scope.userName,
+            firstName: $scope.firstName.trim(),
+            lastName: $scope.lastName.trim(),
+            userName: $scope.userName.trim(),
             // TODO: check this
-            password: ($scope.password != undefined)? $scope.password: null,
+            password: ($scope.password != undefined)? $scope.password.trim(): null,
             group_id: $scope.group,
             role_id: $scope.role,
             email: $scope.email,
@@ -81,14 +81,18 @@ angular.module('nucleusApp')
           };
 
           if (action === 'edit') {
-            UserService.update($scope.id, data)
-            .then(function(res){
-              console.log('user updated');
-              $location.url('/users');
-              $scope.model.edit = false;
-            }, function(err) {
-              console.log(err);
-            });
+            if (isValid()) {
+              UserService.update($scope.id, data)
+              .then(function(res){
+                console.log('user updated');
+                $location.url('/users');
+                $scope.model.edit = false;
+              }, function(err) {
+                console.log(err);
+              });
+            } else {
+              alert('Los password no coinciden');
+            }
           } else if (action === 'create') {
             if (isValid()) {
               UserService.create(data)
@@ -105,7 +109,16 @@ angular.module('nucleusApp')
         };
 
         function isValid() {
-          if ($scope.password == $scope.repeatedPassword) {
+          // TODO: review this validation
+          var password = "";
+          var repeatedPassword = "";
+          if ($scope.password != undefined) {
+            password = $scope.password.trim();
+          }
+          if ($scope.repeatedPassword != undefined) {
+            repeatedPassword = $scope.repeatedPassword.trim();
+          }
+          if (password == repeatedPassword) {
             return true;
           } else {
             return false;
