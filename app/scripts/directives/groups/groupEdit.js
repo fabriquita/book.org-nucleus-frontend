@@ -14,11 +14,16 @@ angular.module('nucleusApp')
       },
       templateUrl: 'views/directives/groupEdit.html',
       controller: function($scope, $element, $attrs) {
+        // Preload groups
+        GroupService.getAll().then(function(res) {
+          $scope.groups = res.data.content;
+        });
         var action = $attrs.action || 'edit';
         $scope.action = action;
         
         $scope.id = $scope.model.id;
         $scope.name = $scope.model.name;
+        $scope.parent = ($scope.model.parent != undefined) ? $scope.model.parent.id: null;
         $scope.description = $scope.model.description;
         // Don't send active when action is create
         if (action == 'edit') {
@@ -37,6 +42,7 @@ angular.module('nucleusApp')
           var data = {
             name: $scope.name,
             description: $scope.description,
+            parent_id: $scope.parent,
             active: ($scope.active != undefined)? $scope.active: null
           };
 

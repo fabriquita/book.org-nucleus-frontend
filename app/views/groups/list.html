@@ -50,14 +50,16 @@
             <thead>
               <tr>
                 <th>Nombre del Grupo</th>
+                <th>Grupo padre</th>
                 <th>Descripcion</th>
                 <th>Status</th>
-                <th></th>
+                <th>Editar</th>
               </tr>
             </thead>
             <tbody ng-repeat="group in groups">
               <tr>
                 <td>{{group.name}}</td>
+                <td>{{group.parent.name}}</td>
                 <td>{{group.description}}</td>
                 <td>
                   <span class="label" ng-class="{'label-info': group.active === true, 'label-danger' : group.active === false}">
@@ -66,8 +68,8 @@
                   </span>
                 </td>
                 <td>
-                  <a href="javascript:(0)" ng-click="edit($index)">
-                    <i class="fa fa-pencil"></i>
+                  <a href="javascript:(0)" ng-click="edit($index)" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span> Editar
                   </a>
                 </td>
               </tr>
