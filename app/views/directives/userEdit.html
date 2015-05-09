@@ -18,6 +18,24 @@
    </div>
   </div>
   <div class="form-group col-md-6">
+    <label class="col-md-4 control-label">Correo Electr&oacute;nico</label>
+    <div class="col-md-8">
+      <input class="form-control" id="focusedInput" type="text" placeholder="Ej. user@user.com" ng-model="email">
+    </div>
+  </div>
+  <div class="form-group col-md-6" ng-show="action === 'create'">
+    <label class="col-md-4 control-label">Password</label>
+    <div class="col-md-8">
+      <input class="form-control" id="focusedInput" type="password" ng-model="password">
+    </div>
+  </div>
+  <div class="form-group col-md-6" ng-show="action === 'create'">
+    <label class="col-md-4 control-label">Repetir password</label>
+    <div class="col-md-8">
+      <input class="form-control" id="focusedInput" type="password" ng-model="repeatedPassword" >
+    </div>
+  </div>
+  <div class="form-group col-md-6">
    <label class="col-md-4 control-label">Rol</label>
    <div class="col-md-8">
      <select class="form-control" ng-init="0" ng-model="role" ng-options="r.id as r.name for r in roles" />
@@ -28,12 +46,6 @@
    <div class="col-md-8">
     <select class="form-control" ng-init="0" ng-model="group" ng-options="g.id as g.name for g in groups" />
    </div>
-  </div>
-  <div class="form-group col-md-6">
-    <label class="col-md-4 control-label">Correo Electr&oacute;nico</label>
-    <div class="col-md-8">
-      <input class="form-control" id="focusedInput" type="text" placeholder="Ej. user@user.com" ng-model="email">
-    </div>
   </div>
   <div class="form-group col-md-6" ng-show="action === 'edit'">
    <label class="col-md-4 control-label">Status</label>

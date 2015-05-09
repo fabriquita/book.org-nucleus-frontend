@@ -39,7 +39,8 @@ angular.module('nucleusApp')
             $scope.firstName = res.data.firstName;
             $scope.lastName = res.data.lastName;
             $scope.userName = res.data.userName;
-            $scope.password = res.data.password;
+            // Don't edit password
+            //$scope.password = res.data.password;
             $scope.email = res.data.email;
             $scope.group = res.data.group.id;
             $scope.role = res.data.role.id;
@@ -52,8 +53,8 @@ angular.module('nucleusApp')
           $scope.firstName = $scope.model.firstName;
           $scope.lastName = $scope.model.lastName;
           $scope.userName = $scope.model.userName;
-          // Password is editable?
-          //$scope.password = $scope.model.password;
+          $scope.password = $scope.model.password;
+          $scope.repeatedPassword = $scope.model.repeatedPassword;
           $scope.email = $scope.model.email;
         }
 
@@ -71,9 +72,8 @@ angular.module('nucleusApp')
             firstName: $scope.firstName,
             lastName: $scope.lastName,
             userName: $scope.userName,
-            //password: $scope.password,
             // TODO: check this
-            password: 'none',
+            password: ($scope.password != undefined)? $scope.password: null,
             group_id: $scope.group,
             role_id: $scope.role,
             email: $scope.email,
@@ -90,15 +90,27 @@ angular.module('nucleusApp')
               console.log(err);
             });
           } else if (action === 'create') {
-            UserService.create(data)
-            .then(function(res) {
-              console.log('user created');
-              $location.url('/users');
-            }, function(err) {
-              console.log('error creating user');
-            });
+            if (isValid()) {
+              UserService.create(data)
+              .then(function(res) {
+                console.log('user created');
+                $location.url('/users');
+              }, function(err) {
+                console.log('error creating user');
+              });
+            } else {
+              alert('Los password no coinciden');
+            }
           }
         };
+
+        function isValid() {
+          if ($scope.password == $scope.repeatedPassword) {
+            return true;
+          } else {
+            return false;
+          }
+        }
 
         function updateArchived() {
           $scope.active = $scope.active;
