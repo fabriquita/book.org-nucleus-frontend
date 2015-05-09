@@ -47,12 +47,14 @@
             <thead>
               <tr>
                 <th>Nombre del Recurso</th>
+                <th>Descripcion</th>
                 <th>Grupo</th>
               </tr>
             </thead>
             <tbody>
               <tr ng-repeat="resource in resources">
                 <td>{{resource.name}}</td>
+                <td>{{resource.description}}</td>
                 <td>{{resource.group.name}}</td>
               </tr>
             </tbody>
