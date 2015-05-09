@@ -63,6 +63,14 @@ var app = angular
         templateUrl: 'views/resources/list.html',
         controller: 'ResourceListCtrl'
       })
+      .when('/permissions', {
+        templateUrl: 'views/permissions/list.html',
+        controller: 'PermissionsListCtrl'
+      })
+      .when('/permissions/create/', {
+        templateUrl: 'views/permissions/create.html',
+        controller: 'PermissionsCreateCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

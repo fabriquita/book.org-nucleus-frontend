@@ -1,0 +1,79 @@
+<!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid full-height">
+    <div class="row full-height">
+      <div class="col-lg-12 full-height">
+        <form class="ng-pristine ng-valid" role="form">
+          <div class="form-group col-sm-3 no-padding no-margin">
+            <div class="input-group">
+              <label class="sr-only">Keyword</label>
+              <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+              <input class="form-control" placeholder="Busca grupo ...">
+            </div>
+          </div>
+          <div class="col-sm-6 no-margin alphabetical-sort">
+            <a href="new-user.html">A</a>
+            <a href="new-user.html">B</a>
+            <a href="new-user.html">C</a>
+            <a href="new-user.html">D</a>
+            <a href="new-user.html">E</a>
+            <a href="new-user.html">F</a>
+            <a href="new-user.html">G</a>
+            <a href="new-user.html">H</a>
+            <a href="new-user.html">I</a>
+            <a href="new-user.html">J</a>
+            <a href="new-user.html">K</a>
+            <a href="new-user.html">L</a>
+            <a href="new-user.html">M</a>
+            <a href="new-user.html">N</a>
+            <a href="new-user.html">O</a>
+            <a href="new-user.html">P</a>
+            <a href="new-user.html">Q</a>
+            <a href="new-user.html">R</a>
+            <a href="new-user.html">S</a>
+            <a href="new-user.html">T</a>
+            <a href="new-user.html">U</a>
+            <a href="new-user.html">V</a>
+            <a href="new-user.html">W</a>
+            <a href="new-user.html">X</a>
+            <a href="new-user.html">Y</a>
+            <a href="new-user.html">Z</a>
+          </div>
+          <div class="form-group col-sm-3 text-right no-padding no-margin">
+            <a type="submit" class="btn btn-default" href="#/permissions/create"><span class="glyphicon glyphicon-plus"></span> Nuevo Permiso</a>
+          </div>
+        </form>
+        <div class="clearfix"></div>
+        <hr/>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover no-margin">
+            <thead>
+              <tr>
+                <th>Rol</th>
+                <th>Recurso</th>
+                <th>Editar</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="permission in permissions">
+              <tr>
+                <td>{{permission.role.name}}</td>
+                <td>{{permission.resource.name}}</td>
+                <td>
+                  <a href="javascript:(0)" ng-click="edit($index)" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-edit"></span> Editar
+                  </a>
+                </td>
+              </tr>
+              <tr ng-hide="!permission.edit">
+                <td colspan="4" class="row-edit">
+                  <permissions-edit model="permission"></permissions-edit>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <paginator service="service" page="0" size="10" callback="onPermissionsLoaded"></paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

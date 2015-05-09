@@ -1,0 +1,83 @@
+<form class="form-horizontal ng-pristine ng-valid" role="form">
+  <div class="form-group col-md-6">
+    <label class="col-md-4 control-label">Rol</label>
+    <div class="col-md-8">
+    <select class="form-control">
+    <option selected="" value="Administrator">Administrador</option>
+    <option value="Seller">Secretaria</option>
+    </select>
+    </div>
+    </div>
+    <div class="form-group col-md-6">
+    <label class="col-md-4 control-label">Recurso</label>
+    <div class="col-md-8">
+    <select class="form-control">
+    <option selected="" value="Administrator">Usuarios</option>
+    <option value="Seller">Grupos</option>
+    <option value="Seller">Roles</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered table-condensed">
+    <thead>
+    <tr>
+    <th width="20%">Leer</th>
+    <th width="20%">Crear</th>
+    <th width="20%">Actualizar</th>
+    <th width="20%">Eliminar</th>
+    <th width="20%">Ejecutar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox">
+    </label>
+    </div>
+    </td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox">
+    </label>
+    </div>
+    </td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox">
+    </label>
+    </div>
+    </td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox">
+    </label>
+    </div>
+    </td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox">
+    </label>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+  <div class="form-group col-md-12 text-center">
+    <button type="submit" class="btn btn-default btn-sm" ng-click="save()">
+      Guadar Datos
+    </button>
+    <button type="submit" class="btn btn-danger btn-sm" ng-click="cancel()">
+      Cancelar
+    </button>
+  </div>
+</form>
