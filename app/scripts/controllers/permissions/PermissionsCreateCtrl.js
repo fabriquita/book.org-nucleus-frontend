@@ -6,7 +6,6 @@ angular.module('nucleusApp')
   'PermissionsService',
   function($scope, PermissionsService) {
     $scope.model = {
-      id: 0, name: '', description: ''
     };
 
   }
