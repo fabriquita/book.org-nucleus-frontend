@@ -41,7 +41,7 @@ angular.module('nucleusApp')
           if (action === 'edit') {
             $scope.model.edit = false;
           } else {
-            $location.url('/permissions');
+            $location.url('/roleresources');
           }
         };
 
@@ -65,7 +65,7 @@ angular.module('nucleusApp')
             PermissionsService.create(data)
             .then(function(res) {
               updateOriginalModel();
-              $location.url('/permissions');
+              $location.url('/roleresources');
             }, function(err) {
               console.log(err);
             });

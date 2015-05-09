@@ -63,11 +63,11 @@ var app = angular
         templateUrl: 'views/resources/list.html',
         controller: 'ResourceListCtrl'
       })
-      .when('/permissions', {
+      .when('/roleresources', {
         templateUrl: 'views/permissions/list.html',
         controller: 'PermissionsListCtrl'
       })
-      .when('/permissions/create/', {
+      .when('/roleresources/create/', {
         templateUrl: 'views/permissions/create.html',
         controller: 'PermissionsCreateCtrl'
       })
