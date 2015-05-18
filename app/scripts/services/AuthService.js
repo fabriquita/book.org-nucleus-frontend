@@ -6,13 +6,12 @@ angular.module('nucleusApp')
   '$rootScope',
   '$window',
   function($http, $rootScope, $window) {
-    var domain = document.domain, url = 'http://' + domain + ':8080';
     return {
       login: function(data) {
-        return $http.post(url + '/auth/login', data);
+        return $http.post($rootScope.getBackendUrl() + '/auth/login', data); 
       },
       logout: function(callback) {
-        return $http.post(url + '/auth/logout', {}).then(function(res) {
+        return $http.post($rootScope.getBackendUrl() + '/auth/logout', {}).then(function(res) {
           console.log('user logged out');
           //TODO: review this
           delete $window.sessionStorage.credentials;

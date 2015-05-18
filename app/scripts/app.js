@@ -79,6 +79,11 @@ var app = angular
  * It filters routes, and checks whether the user is logged in or not
  */
 app.run(['$rootScope', '$location', 'AuthService', function ($rootScope, $location, AuthService) {
+  
+  $rootScope.getBackendUrl = function() {
+    return 'http://' + $location.host() + ':8080/nucleus-backend/';
+  };
+
   $rootScope.$on('$locationChangeStart', function (event) {
     if (AuthService.isLoggedIn()) {
       console.log('user logged');

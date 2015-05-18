@@ -3,14 +3,12 @@
 angular.module('nucleusApp')
 .factory('RoleService', [
   '$http',
+  '$rootScope',
   '$window',
-  function($http, $window) {
-    var domain = document.domain;
-    var url = 'http://' + domain + ':8080/role/';
-
+  function($http, $rootScope, $window) {
     return {
       create: function(data) {
-        return $http.put(url, data, {
+        return $http.put($rootScope.getBackendUrl() + 'role/', data, {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,
@@ -19,7 +17,7 @@ angular.module('nucleusApp')
         });
       },
       update: function(id, data) {
-        return $http.post(url + id, data, {
+        return $http.post($rootScope.getBackendUrl() + 'role/' + id, data, {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,
@@ -28,10 +26,10 @@ angular.module('nucleusApp')
         });
       },
       delete: function(id) {
-        return $http.delete(url + id);
+        return $http.delete($rootScope.getBackendUrl() + 'role/' + id);
       },
       getAll: function(page, size) {
-        return $http.get(url + '?page=' + (page || 0) + '&size=' + (size || 10), {
+        return $http.get($rootScope.getBackendUrl() + 'role/' + '?page=' + (page || 0) + '&size=' + (size || 10), {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,
@@ -40,7 +38,7 @@ angular.module('nucleusApp')
         });
       },
       get: function(id) {
-        return $http.get(url + id, {
+        return $http.get($rootScope.getBackendUrl() + 'role/' + id, {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,
