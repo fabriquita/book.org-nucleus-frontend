@@ -1,9 +1,6 @@
 <!-- Page Content -->
-<div id="page-content-wrapper">
-  <div class="container-fluid full-height">
-    <div class="row full-height">
-      <div class="col-lg-12 full-height">
-        <form class="ng-pristine ng-valid" role="form">
+
+      <form class="ng-pristine ng-valid top-options" role="form">
           <div class="form-group col-sm-3 no-padding no-margin">
             <div class="input-group">
               <label class="sr-only">Keyword</label>
@@ -42,9 +39,8 @@
           <div class="form-group col-sm-3 text-right no-padding no-margin">
             <a type="submit" class="btn btn-default" href="#/groups/create"><span class="glyphicon glyphicon-plus"></span> Nuevo Grupo</a>
           </div>  
-        </form>
-        <div class="clearfix"></div>
-        <hr/>
+      </form>
+      <div id="container-bar">
         <div class="table-responsive">
           <table class="table table-bordered table-hover no-margin">
             <thead>
@@ -82,8 +78,5 @@
           </table>
           <paginator service="service" page="0" size="10" callback="onGroupsLoaded"></paginator>
         </div>
+
       </div>
-    </div>
-  </div>
-</div>
-  
