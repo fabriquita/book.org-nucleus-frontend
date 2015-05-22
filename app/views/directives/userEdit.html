@@ -1,26 +1,32 @@
-<form class="form-horizontal ng-pristine ng-valid" role="form">
-  <div class="form-group col-md-6">
+<form name="userForm" class="form-horizontal ng-pristine ng-valid" role="form" novalidate>
+  
+  <div class="form-group col-md-6" ng-class="{'has-error': userForm.firstName.$invalid && !userForm.firstName.$pristine}">
     <label class="col-md-4 control-label">Nombres</label>
     <div class="col-md-8">
-      <input class="form-control" type="text" placeholder="Ej. Juan Pablo" ng-model="firstName">
+      <input class="form-control" name="firstName" type="text" placeholder="Ej. Juan Pablo" ng-model="firstName" required>
+      <p ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-block">nombre es requerido.</p>
     </div>
   </div>
-  <div class="form-group col-md-6">
+
+  <div class="form-group col-md-6" ng-class="{'has-error': userForm.lastName.$invalid && !userForm.lastName.$pristine}">
    <label class="col-md-4 control-label">Apellidos</label>
    <div class="col-md-8">
-     <input class="form-control" type="text" placeholder="Ej. Perez Rodriguez" ng-model="lastName">
+     <input class="form-control" name="lastName" type="text" placeholder="Ej. Perez Rodriguez" ng-model="lastName" required>
+     <p ng-show="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-block">apellido es requerido.</p>
    </div>
   </div>
-  <div class="form-group col-md-6">
+  <div class="form-group col-md-6" ng-class="{'has-error': userForm.userName.$invalid && !userForm.userName.$pristine}">
    <label class="col-md-4 control-label">Nombre de Usuario</label>
    <div class="col-md-8">
-     <input class="form-control" type="text" placeholder="Ej. jperez" ng-model="userName">
+     <input class="form-control" type="text" name="userName" placeholder="Ej. jperez" ng-model="userName" ng-minlength="4" ng-maxlength="12" required>
+     <p ng-show="userForm.userName.$invalid && !userForm.userName.$pristine" class="help-block">nombre de usuario es requerido(4 y 12 caracteres).</p>
    </div>
   </div>
-  <div class="form-group col-md-6">
+  <div class="form-group col-md-6" ng-class="{'has-error': userForm.email.$invalid && !userForm.email.$pristine}">
     <label class="col-md-4 control-label">Correo Electr&oacute;nico</label>
     <div class="col-md-8">
-      <input class="form-control" id="focusedInput" type="text" placeholder="Ej. user@user.com" ng-model="email">
+      <input class="form-control" id="focusedInput" type="text" placeholder="Ej. user@user.com" name="email" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" ng-model="email" required>
+      <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Correo electr&oacute;nico invalido.</p>
     </div>
   </div>
   <div class="form-group col-md-6">
@@ -66,7 +72,7 @@
     </div>
   </div>
   <div class="form-group col-md-12 text-center bottom-bar">
-  <button type="submit" class="btn btn-default btn-sm" ng-click="save()">Guadar Datos</button>
+  <button type="submit" class="btn btn-default btn-sm" ng-disabled="userForm.$invalid" ng-click="save()">Guadar Datos</button>
   <button type="submit" class="btn btn-danger btn-sm" ng-click="cancel()">Cancelar</button>
   </div>
 </form>

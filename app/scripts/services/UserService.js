@@ -9,7 +9,7 @@ angular.module('nucleusApp')
     return {
       create: function(data) {
         console.log(data);
-        return $http.put($rootScope.getBackendUrl() + 'user', data, {
+        return $http.put($rootScope.getBackendUrl() + 'user/', data, {
           //TODO: refactor this
           headers: {
             credentials: $window.sessionStorage.credentials,
