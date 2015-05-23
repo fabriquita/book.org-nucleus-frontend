@@ -1,8 +1,9 @@
-<form class="form-horizontal ng-pristine ng-valid" role="form">
-  <div class="form-group col-md-6">
+<form name="groupForm" class="form-horizontal ng-pristine ng-valid" role="form" novalidate>
+  <div class="form-group col-md-6" ng-class="{'has-error': groupForm.name.$invalid && !groupForm.name.$pristine}">
     <label class="col-md-4 control-label">Nombre del Grupo</label>
     <div class="col-md-8">
-      <input class="form-control" type="text" placeholder="Ej. Juan Pablo" ng-model="name">
+      <input class="form-control" name="name" type="text" placeholder="Ej. Juan Pablo" ng-model="name" required>
+      <p ng-show="groupForm.name.$invalid && !groupForm.name.$pristine" class="help-block">nombre es requerido.</p>
     </div>
   </div>
   <div class="form-group col-md-6">
@@ -30,7 +31,7 @@
      </div>
   </div>
   <div class="form-group col-md-12 text-center">
-    <button type="submit" class="btn btn-default btn-sm" ng-click="save()">
+    <button type="submit" class="btn btn-default btn-sm" ng-disabled="groupForm.$invalid" ng-click="save()">
       Guadar Datos
     </button>
     <button type="submit" class="btn btn-danger btn-sm" ng-click="cancel()">
