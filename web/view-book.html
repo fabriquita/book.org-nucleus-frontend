@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app="bootstrapApp">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <link rel="stylesheet" href="css/style.css">      
+      <script src="js/angular.min.js"></script>
+      <script src="js/angular-route.min.js"></script>     
+    </head>
+    <body ng-controller="controladorAnimales">
+    <!-- Horizontal Navbar --> 
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ng-href="#"><img height="50px" src="img/logo.jpg"></a>
+            </div>      
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">                  
+                  <li class="dropdown">
+                    <a href="#" class="user-info dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      <img class="img-circle" src="img/user.png">
+                      <span class="user">Juan Rodriguez <br/> Administrador</span>
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>    
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>   
+                  <li><a ng-href="#/about" class="active" href="library.html"><span class="glyphicon glyphicon-book"></span></a></li>
+                  <li><a href="index.html"><span class="glyphicon glyphicon-cog"></span></a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-off"></span></a></li>                   
+                </ul>                    
+            </div>
+        </div>
+    </nav>
+    <!-- End Horizontal Navbar  -->
+    <div id="wrapper">
+      <div class="full-height">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li>
+                  <a  class="active" href="library.html"><i class="fa fa-book"></i> Libros</a> 
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-tags"></i> Colecciones</a>
+              </li>             
+          </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper" class="full-height no-padding">
+        <div class="container-fluid full-height father">
+          <div class="row full-height">
+              <div class="top-options">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+                </span>
+                <strong>Tecnología |</strong>
+                <strong>Introduccion a la Robotica</strong> - <small>Juan Ibañez Fernandez</small>
+              </div>
+              <div id="#container-bar" class="container-fluid">                    
+                    <div class="row">
+                       <div class="form-group col-md-3">
+                         <img class="thumbnail img-responsive img-center" src="img/portadas/portada1.jpg" alt="">
+                       </div>
+                      <div class="form-group col-md-9">
+                         <div class="col-md-12">
+                          <br/>
+                           <p>At w3schools.com you will learn how to make a website</p>
+                          <br/>
+                           <p>At w3schools.com you will learn how to make a website</p>                           
+                         </div>
+                       </div> 
+                     </div> 
+              </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>         
+    <!-- bower:js -->
+    <script src="js/bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/bower_components/angular/angular.js"></script>
+    <script src="js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="js/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="js/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="js/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="js/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="js/bower_components/angular-route/angular-route.js"></script>
+    <script src="js/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="js/bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+
+        <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>     
+        
+    </body>
+</html>
+
+
