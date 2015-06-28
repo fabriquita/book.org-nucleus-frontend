@@ -1,0 +1,56 @@
+<form class="form-horizontal ng-pristine ng-valid" role="form">
+   <div class="form-group col-md-6">
+      <label class="col-md-4 control-label">Título del Libro</label>
+      <div class="col-md-8">
+         <input class="form-control" id="focusedInput" type="text" placeholder="Introduccion a la Robotica" ng-model="title">
+      </div>
+   </div>
+   <div class="form-group col-md-6">
+      <label class="col-md-4 control-label">Autor</label>
+      <div class="col-md-8">
+         <input class="form-control" id="focusedInput" type="text" placeholder="Ej. Perez Rodriguez" ng-model="author">
+      </div>
+   </div>
+   <div class="form-group col-md-6">
+      <label class="col-md-4 control-label">Colección</label>
+      <div class="col-md-8">
+         <select class="form-control">
+            <option selected="" value="Administrator">Ciencia</option>
+            <option value="Seller">Historia</option>
+            <option value="Seller">Literatura</option>
+            <option value="Seller">Tecnología</option>
+            <option value="Seller">Arte</option>
+            <option value="Seller">Matemática</option>
+            <option value="Seller">Entretenimiento</option>
+            <option value="Seller">Salud</option>
+         </select>
+      </div>
+   </div>
+   <div class="form-group col-md-6">
+      <label class="col-md-4 control-label">Status</label>
+      <div class="col-md-8">
+         <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+            <label class="onoffswitch-label" for="myonoffswitch">
+               <span class="onoffswitch-inner"></span>
+               <span class="onoffswitch-switch"></span>
+            </label>
+         </div>
+      </div>
+   </div>
+   <div class="form-group col-md-12" ng-hide="edit">
+      <label class="col-md-6 control-label">Portada</label>
+      <div class="col-md-6">
+         <input type="file" id="exampleInputFile">
+      </div>
+   </div>
+   <div class="form-group col-md-12 ">
+      <div class="col-md-12 text-center ">
+         <div text-angular ng-model="content"></div>
+      </div>
+   </div>
+   <div class="form-group col-md-12 text-center bottom-bar">
+      <button type="submit" class="btn btn-default btn-sm" ng-click="save()">Guadar Datos</button>
+      <button type="submit" class="btn btn-danger btn-sm" ng-click="cancel()">Cancelar</button>
+   </div>
+</form>

@@ -15,62 +15,79 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'textAngular'
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
       .when('/login', {
         templateUrl: 'views/auth/login.html',
         controller: 'AuthCtrl'
       })
-      .when('/users', {
-        templateUrl: 'views/users/list.html',
-        controller: 'UserListCtrl'
+      .when('/books', {
+        templateUrl: 'views/books/list.html',
+        controller: 'BookListCtrl'
       })
-      .when('/userss', {
-        templateUrl: 'views/users/list.html',
-        controller: 'UserListCtrl'
+      .when('/books/create', {
+        templateUrl: 'views/books/create.html',
+        controller: 'BookCreateCtrl'
       })
-      .when('/users/create', {
-        templateUrl: 'views/users/create.html',
-        controller: 'UserCreateCtrl'
+      .when('/books/edit/:id', {
+        templateUrl: 'views/books/edit.html',
+        controller: 'BookEditCtrl'
       })
-      .when('/users/edit/:id', {
-        templateUrl: 'views/users/edit.html',
-        controller: 'UserEditCtrl'
+      .when('/books/:id', {
+        templateUrl: 'views/books/detail.html',
+        controller: 'BookDetailCtrl'
       })
-      .when('/groups', {
-        templateUrl: 'views/groups/list.html',
-        controller: 'GroupListCtrl'
-      })
-      .when('/groups/create', {
-        templateUrl: 'views/groups/create.html',
-        controller: 'GroupCreateCtrl'
-      })
-      .when('/roles', {
-        templateUrl: 'views/roles/list.html',
-        controller: 'RoleListCtrl'
-      })
-      .when('/roles/create/', {
-        templateUrl: 'views/roles/create.html',
-        controller: 'RoleCreateCtrl'
-      })
-      .when('/resources', {
-        templateUrl: 'views/resources/list.html',
-        controller: 'ResourceListCtrl'
-      })
-      .when('/roleresources', {
-        templateUrl: 'views/permissions/list.html',
-        controller: 'PermissionsListCtrl'
-      })
-      .when('/roleresources/create/', {
-        templateUrl: 'views/permissions/create.html',
-        controller: 'PermissionsCreateCtrl'
-      })
+      // .when('/', {
+      //   templateUrl: 'views/main.html',
+      //   controller: 'MainCtrl'
+      // })
+      // .when('/users', {
+      //   templateUrl: 'views/users/list.html',
+      //   controller: 'UserListCtrl'
+      // })
+      // .when('/users', {
+      //   templateUrl: 'views/users/list.html',
+      //   controller: 'UserListCtrl'
+      // })
+      // .when('/users/create', {
+      //   templateUrl: 'views/users/create.html',
+      //   controller: 'UserCreateCtrl'
+      // })
+      // .when('/users/edit/:id', {
+      //   templateUrl: 'views/users/edit.html',
+      //   controller: 'UserEditCtrl'
+      // })
+      // .when('/groups', {
+      //   templateUrl: 'views/groups/list.html',
+      //   controller: 'GroupListCtrl'
+      // })
+      // .when('/groups/create', {
+      //   templateUrl: 'views/groups/create.html',
+      //   controller: 'GroupCreateCtrl'
+      // })
+      // .when('/roles', {
+      //   templateUrl: 'views/roles/list.html',
+      //   controller: 'RoleListCtrl'
+      // })
+      // .when('/roles/create/', {
+      //   templateUrl: 'views/roles/create.html',
+      //   controller: 'RoleCreateCtrl'
+      // })
+      // .when('/resources', {
+      //   templateUrl: 'views/resources/list.html',
+      //   controller: 'ResourceListCtrl'
+      // })
+      // .when('/roleresources', {
+      //   templateUrl: 'views/permissions/list.html',
+      //   controller: 'PermissionsListCtrl'
+      // })
+      // .when('/roleresources/create/', {
+      //   templateUrl: 'views/permissions/create.html',
+      //   controller: 'PermissionsCreateCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });

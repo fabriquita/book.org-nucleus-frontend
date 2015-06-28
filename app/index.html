@@ -9,7 +9,8 @@
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/textAngular/dist/textAngular.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -33,15 +34,6 @@
     <div id="page-content-wrapper" class="full-height no-padding">
       <div class="container-fluid full-height father">
         <div class="row full-height" ng-view="">
-
-
-
-
-
-
-
-
-
         </div>
       </div>
     </div>
@@ -78,6 +70,15 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/rangy/rangy-core.js"></script>
+<script src="bower_components/rangy/rangy-classapplier.js"></script>
+<script src="bower_components/rangy/rangy-highlighter.js"></script>
+<script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+<script src="bower_components/rangy/rangy-serializer.js"></script>
+<script src="bower_components/rangy/rangy-textrange.js"></script>
+<script src="bower_components/textAngular/dist/textAngular.js"></script>
+<script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+<script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -91,6 +92,10 @@
 <script src="scripts/services/RoleService.js"></script>
 <script src="scripts/services/ResourceService.js"></script>
 <script src="scripts/services/PermissionsService.js"></script>
+<!-- Book Services -->
+<script src="scripts/services/PermissionsService.js"></script>
+<!-- End Services -->
+<script src="scripts/services/BookService.js"></script>
 <!-- End Services -->
 
 <!-- Filters -->
@@ -104,8 +109,12 @@
 <script src="scripts/directives/general/paginator.js"></script>
 <script src="scripts/directives/groups/groupEdit.js"></script>
 <script src="scripts/directives/users/userEdit.js"></script>
-  <script src="scripts/directives/roles/roleEdit.js"></script>
-  <script src="scripts/directives/permissions/permissionsEdit.js"></script>
+<script src="scripts/directives/roles/roleEdit.js"></script>
+<script src="scripts/directives/permissions/permissionsEdit.js"></script>
+<!-- Book Directives -->
+<script src="scripts/directives/books/bookEdit.js"></script>
+<!-- End Directives -->
+
 <!-- End Directives -->
 
 <!-- Controllers -->
@@ -121,6 +130,13 @@
 <script src="scripts/controllers/roles/RoleCreateCtrl.js"></script>
 <script src="scripts/controllers/permissions/PermissionsListCtrl.js"></script>
 <script src="scripts/controllers/permissions/PermissionsCreateCtrl.js"></script>
+<!-- Book Controllers -->
+<script src="scripts/controllers/books/BookListCtrl.js"></script>
+<script src="scripts/controllers/books/BookEditCtrl.js"></script>
+<script src="scripts/controllers/books/BookDetailCtrl.js"></script>
+<script src="scripts/controllers/books/BookCreateCtrl.js"></script>
+<!-- End Controllers -->
+
 <!-- End Controllers -->
 
 <!-- endbuild -->
