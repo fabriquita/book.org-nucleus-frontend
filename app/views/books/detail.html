@@ -7,20 +7,13 @@
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
                 </span>
-            <strong>Tecnología |</strong>
-            <strong>Introduccion a la Robotica</strong> - <small>Juan Ibañez Fernandez</small>
+            <strong>{{book.category}}</strong>
+            <strong>{{book.title}}</strong> - <small>{{book.author}}</small>
          </div>
          <div id="#container-bar" class="container-fluid">
             <div class="row">
-               <div class="form-group col-md-3">
-                  <img class="thumbnail img-responsive img-center" src="images/portadas/portada1.jpg" alt="">
-               </div>
                <div class="form-group col-md-9">
-                  <div class="col-md-12">
-                     <br/>
-                     <p>At w3schools.com you will learn how to make a website</p>
-                     <br/>
-                     <p>At w3schools.com you will learn how to make a website</p>
+                  <div class="col-md-12" ng-bind-html="book.content">
                   </div>
                </div>
             </div>

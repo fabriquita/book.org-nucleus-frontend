@@ -6,6 +6,20 @@ angular.module('nucleusApp')
   'BookService',
   '$routeParams',
   function($scope, BookService, $routeParams) {
-    $scope.book = BookService.get($routeParams.id);
+
+    $scope.loadBook = function() {
+      BookService.get($routeParams.id).then(
+        function(res) {
+          $scope.book = res.data;
+          console.log($scope.book);
+        },
+        function(error) {
+          console.log('error', error);
+        }
+      );
+    };
+
+    $scope.loadBook();
+
   }
 ]);
