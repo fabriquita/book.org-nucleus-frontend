@@ -38,9 +38,8 @@ angular.module('nucleusApp')
         $scope.cancel = function() {
           if (action === 'edit') {
             $scope.model.edit = false;
-          } else {
-            $location.url('/books');
           }
+          $location.url('/books');
         };
 
         $scope.save = function() {
@@ -55,6 +54,7 @@ angular.module('nucleusApp')
             BookService.update($scope.id, data)
             .then(function(res){
               updateOriginalModel();
+              $location.url('/books');
               // Finish edit
               $scope.model.edit = false;
             }, function(err) {
